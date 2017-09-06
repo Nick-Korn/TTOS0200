@@ -5,7 +5,7 @@
 namespace Hello {
     class BlackJack
     {
-        public static void BalackJack()
+        public static void PlayBlackJack()
         {
             int myNumber = 17;
             int theirNumber;
