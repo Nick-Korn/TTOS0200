@@ -2,7 +2,7 @@
  * 
  * Created by Niko Liimatainen 6.9.2017 
  * 
- * OOP TTOS0200 Assignments 3, 4
+ * OOP TTOS0200 Assignments 3, 4, 5
 */
 
 using System;
@@ -19,6 +19,7 @@ namespace Assign
         {
             //ThreeNumbers();
             AskAge();
+            ConvertSeconds();
         }
 
         static void ThreeNumbers()
@@ -63,6 +64,20 @@ namespace Assign
                     Console.WriteLine("Senior!");
                 }
             } while (true);
+        }
+        
+        static void ConvertSeconds()
+        {
+            // Assignment 5
+            int inputSeconds = 0;
+            int hours = 0;
+            int minutes = 0;
+            int seconds = 0;
+            Console.WriteLine("Input seconds");
+            inputSeconds = int.Parse(Console.ReadLine());
+            hours = inputSeconds / 3600;
+            minutes = (inputSeconds - hours) / 60;
+            seconds = hours - minutes;
         }
     }
 }
