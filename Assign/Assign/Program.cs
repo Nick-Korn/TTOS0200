@@ -32,8 +32,9 @@ namespace Lab1
             //ReverseArray();
             //GradeSkiJump();
             //StarTheGrades();
-            // GenerateStarSpruce();
-            GuessRandomNumber();
+            //GenerateStarSpruce();
+            //GuessRandomNumber();
+            JoinAndArrangeArrays();
         }
 
         static void Asker()
@@ -285,10 +286,8 @@ namespace Lab1
             inputtedNumber = int.Parse(Console.ReadLine());
             for (int i = 0; i < inputtedNumber +1; i++)
             {
-                for (int j = 0; j < i; j++)
-                {
-                    Console.Write(star);
-                }
+                for (int j = 0; j < i; j++) Console.Write(star);
+
                Console.WriteLine("\n");
                 
             }
@@ -372,23 +371,17 @@ namespace Lab1
             inputtedValue = int.Parse(Console.ReadLine());
             for (int i = 0; i < inputtedValue - 2; i++)
             {
-                for (int j = 0; j < (inputtedValue - 2 - i); j++)
-                {
-                    Console.Write(" ");
-                }
-                for (int j = 0; j < starCount; j++)
-                {
-                    Console.Write(star);
-                }
+                for (int j = 0; j < (inputtedValue - 2 - i); j++) Console.Write(" ");
+                
+                for (int j = 0; j < starCount; j++) Console.Write(star);
+                
                 starCount = starCount + 2;
                 Console.WriteLine("\n");
             }
             for (int i = 0; i < root; i++)
             {
-                for (int j = 0; j < (inputtedValue - 2); j++)
-                {
-                    Console.Write(" ");
-                }
+                for (int j = 0; j < (inputtedValue - 2); j++) Console.Write(" ");
+                
                 Console.WriteLine(star);
             }
         }
@@ -423,6 +416,22 @@ namespace Lab1
                     }
                 }
             } while (true);
+        }
+        static void JoinAndArrangeArrays()
+        {
+            // Assignment 17
+            int[] firstArray = { 10, 20, 30, 40, 50 };
+            int[] secondArray = { 5, 15, 25, 35, 45 };
+            int[] mergedArray = new int [firstArray.Length + secondArray.Length];
+            Console.Write("Numbers in the first array : ");
+            foreach (int number in firstArray) Console.Write("{0}, ", number);
+            Console.Write("\nNumbers in the second array : ");
+            foreach (int number in secondArray) Console.Write("{0}, ", number);
+            Array.Copy(firstArray, mergedArray, firstArray.Length);
+            Array.Copy(secondArray, 0, mergedArray, firstArray.Length, secondArray.Length);
+            Array.Sort(mergedArray);
+            Console.Write("\nNumbers in the merged array : ");
+            foreach (int number in mergedArray) Console.Write("{0}, ", number);
         }
     }
 }
