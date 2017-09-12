@@ -27,7 +27,8 @@ namespace Lab1
             //CheckLeapYear();
             //CheckMax();
             //AskSumNumbers();
-            CheckEvenNumber();
+            //CheckEvenNumber();
+            DoStarTree();
         }
 
         static void Asker()
@@ -268,6 +269,23 @@ namespace Lab1
                 {
                     Console.WriteLine("HEP! {0} is an even number!", number);
                 }
+            }
+        }
+        static void DoStarTree()
+        {
+            // Assignment 11
+            int inputtedNumber;
+            char star = '*';
+            Console.WriteLine("Please input a number: ");
+            inputtedNumber = int.Parse(Console.ReadLine());
+            for (int i = 0; i < inputtedNumber +1; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write(star);
+                }
+               Console.WriteLine("\n");
+                
             }
         }
     }
