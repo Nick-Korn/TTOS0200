@@ -31,7 +31,8 @@ namespace Lab1
             //DoStarTree();
             //ReverseArray();
             //GradeSkiJump();
-            StarTheGrades();
+            //StarTheGrades();
+            GenerateStarSpruce();
         }
 
         static void Asker()
@@ -339,7 +340,7 @@ namespace Lab1
             {
                 Console.WriteLine("Please input a grade: ");
                 inputtedValue = int.Parse(Console.ReadLine());
-                if (inputtedValue >= 0 && inputtedValue <6)
+                if (inputtedValue >= 0 && inputtedValue < 6)
                 {
                     gradeArray[i] = inputtedValue;
                 }
@@ -357,6 +358,37 @@ namespace Lab1
                     Console.Write(star);
                 }
                 Console.Write("\n");
+            }
+        }
+        static void GenerateStarSpruce()
+        {
+            // Assignment 12 
+            int inputtedValue;
+            int root = 2;
+            int starCount = 1;
+            char star = '*';
+            Console.WriteLine("Please input a number: ");
+            inputtedValue = int.Parse(Console.ReadLine());
+            for (int i = 0; i < inputtedValue - 2; i++)
+            {
+                for (int j = 0; j < (inputtedValue - 2 - i); j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = 0; j < starCount; j++)
+                {
+                    Console.Write(star);
+                }
+                starCount = starCount + 2;
+                Console.WriteLine("\n");
+            }
+            for (int i = 0; i < root; i++)
+            {
+                for (int j = 0; j < (inputtedValue - 2); j++)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine(star);
             }
         }
     }
