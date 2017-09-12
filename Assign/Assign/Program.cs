@@ -25,7 +25,8 @@ namespace Lab1
             //ConvertSeconds();
             //CalculateConsumption();
             //CheckLeapYear();
-            CheckMax();
+            //CheckMax();
+            AskSumNumbers();
         }
 
         static void Asker()
@@ -237,6 +238,24 @@ namespace Lab1
             }
             maxValue = threeNumbers.Max();
             Console.WriteLine("The largest of the inputted numbers was: {0}", maxValue);
+        }
+        static void AskSumNumbers()
+        {
+            //Assignment 9
+            int inputNumber;
+            List<int> numList = new List<int>();
+            int sum = 0;
+            do
+            {
+                Console.WriteLine("Please input an integer");
+                inputNumber = int.Parse(Console.ReadLine());
+                numList.Add(inputNumber);
+            } while (inputNumber != 0);
+            foreach (int number in numList)
+            {
+                sum = number + sum;
+            }
+            Console.WriteLine("The sum of the inputted numbers is: {0}", sum);
         }
     }
 }
