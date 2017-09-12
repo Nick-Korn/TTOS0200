@@ -1,8 +1,9 @@
 ﻿/*
  * 
  * Created by Niko Liimatainen 6.9.2017 
+ * Modified by Niko Liimatainen 12.9.2017
  * 
- * OOP TTOS0200 Assignments 3, 4, 5
+ * OOP TTOS0200 Assignments for Lab1 
 */
 
 using System;
@@ -11,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assign
+namespace Lab1
 {
     class Program
     {
@@ -20,6 +21,72 @@ namespace Assign
             //ThreeNumbers();
             AskAge();
             ConvertSeconds();
+        }
+
+        static void Asker()
+        {
+            do
+            {
+                string userInput;
+                int parsedNum;
+
+                Console.WriteLine("Please input a number: ");
+                userInput = Console.ReadLine();
+
+                parsedNum = Int32.Parse(userInput);
+
+                if (parsedNum > 0 && parsedNum <= 3)
+                {
+                    Console.WriteLine("You inputted the number {0}", userInput);
+                }
+                else
+                {
+                    Console.WriteLine("A different number.");
+                }
+            } while (true);
+        }
+
+        static void Grading()
+        {
+            string userInput;
+            int parsedNum;
+            do
+            {
+                Console.WriteLine("Amount of points:");
+                userInput = Console.ReadLine();
+                parsedNum = Int32.Parse(userInput);
+
+                if (parsedNum >= 0 & parsedNum <= 1)
+                {
+                    Console.WriteLine("The grade is 0");
+                }
+                else if (parsedNum >= 2 & parsedNum <= 3)
+                {
+                    Console.WriteLine("The grade is 1");
+                }
+                else if (parsedNum >= 4 & parsedNum <= 5)
+                {
+                    Console.WriteLine("The grade is 2");
+                }
+                else if (parsedNum >= 6 & parsedNum <= 7)
+                {
+                    Console.WriteLine("The grade is 3");
+                }
+                else if (parsedNum >= 8 & parsedNum <= 9)
+                {
+                    Console.WriteLine("The grade is 4");
+                }
+                else if (parsedNum >= 10 & parsedNum <= 12)
+                {
+                    Console.WriteLine("The grade is 5");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input for grading");
+                }
+
+
+            } while (true);
         }
 
         static void ThreeNumbers()
@@ -44,9 +111,9 @@ namespace Assign
         }
         static void AskAge()
         {
+            // Assgiment 4
             do
             {
-                // Assgiment 4
                 int age = 0;
                 Console.WriteLine("Please input your age: ");
                 age = int.Parse(Console.ReadLine());
