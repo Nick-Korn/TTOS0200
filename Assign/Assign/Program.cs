@@ -26,7 +26,8 @@ namespace Lab1
             //CalculateConsumption();
             //CheckLeapYear();
             //CheckMax();
-            AskSumNumbers();
+            //AskSumNumbers();
+            CheckEvenNumber();
         }
 
         static void Asker()
@@ -256,6 +257,18 @@ namespace Lab1
                 sum = number + sum;
             }
             Console.WriteLine("The sum of the inputted numbers is: {0}", sum);
+        }
+        static void CheckEvenNumber()
+        {
+            //Assignment 10
+            int[] numberArray = { 1, 2, 33, 44, 55, 68, 77, 96, 100 };
+            foreach (int number in numberArray)
+            {
+                if (number%2 == 0)
+                {
+                    Console.WriteLine("HEP! {0} is an even number!", number);
+                }
+            }
         }
     }
 }
