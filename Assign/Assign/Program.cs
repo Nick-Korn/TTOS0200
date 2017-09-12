@@ -23,8 +23,9 @@ namespace Lab1
             //ThreeNumbers();
             //AskAge();
             //ConvertSeconds();
-            CalculateConsumption();
+            //CalculateConsumption();
             //CheckLeapYear();
+            CheckMax();
         }
 
         static void Asker()
@@ -221,6 +222,21 @@ namespace Lab1
                 }
             } while (true);
 
+        }
+        static void CheckMax()
+        {
+            //Assignment 8
+            int[] threeNumbers = new int[3];
+            int inputNumber;
+            int maxValue;
+            Console.WriteLine("Please input three integers");
+            for (int i = 0; i < threeNumbers.Length; i++)
+            {
+                inputNumber = int.Parse(Console.ReadLine());
+                threeNumbers[i] = inputNumber;
+            }
+            maxValue = threeNumbers.Max();
+            Console.WriteLine("The largest of the inputted numbers was: {0}", maxValue);
         }
     }
 }
