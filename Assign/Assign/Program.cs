@@ -22,7 +22,8 @@ namespace Lab1
             //Grading();
             //ThreeNumbers();
             //AskAge();
-            ConvertSeconds();
+            //ConvertSeconds();
+            CalculateConsumption();
         }
 
         static void Asker()
@@ -48,7 +49,6 @@ namespace Lab1
                 }
             } while (true);
         }
-
         static void Grading()
         {
             //Asignment 2
@@ -92,7 +92,6 @@ namespace Lab1
 
             } while (true);
         }
-
         static void ThreeNumbers()
         {
             // Assginment 3
@@ -136,7 +135,6 @@ namespace Lab1
                 }
             } while (true);
         }
-        
         static void ConvertSeconds()
         {
             // Assignment 5
@@ -150,20 +148,20 @@ namespace Lab1
                 inputSeconds = int.Parse(Console.ReadLine());
                 if (inputSeconds >= 0 && inputSeconds < 60)
                 {
-                    Console.WriteLine("Seconds: " + inputSeconds);
+                    Console.WriteLine("Seconds: {0}", inputSeconds);
                 }
                 else if (inputSeconds < 3600 && inputSeconds > 60)
                 {
                     minutes = inputSeconds / 60;
                     seconds = inputSeconds % 60;
-                    Console.WriteLine("Minutes: " + minutes + "\nSeconds: " + seconds);
+                    Console.WriteLine("Minutes: {0} \nSeconds: {1}", minutes, seconds);
                 }
                 else if (inputSeconds >= 3600)
                 {
                     hours = inputSeconds / 3600;
                     minutes = (inputSeconds % 3600) / 60;
                     seconds = (inputSeconds % 3600) % 60;
-                    Console.WriteLine("Hours:" + hours + "\nMinutes:" + minutes + "\nSeconds:" + seconds);
+                    Console.WriteLine("Hours: {0} \nMinutes: {1} \nSeconds: {2}", hours, minutes, seconds);
                 }
                 else
                 {
@@ -171,6 +169,24 @@ namespace Lab1
                 }
             } while (true);
         }
-        static void
+        static void CalculateConsumption()
+        {
+            //Assignment 6
+            float consumptionPer100km = 7.02F;
+            float fuelCostPerLitre = 1.595F;
+            float consumption;
+            float totalCost;
+            float distance;
+            do
+            {
+                Console.WriteLine("Please input the distance travelled: ");
+                distance = int.Parse(Console.ReadLine());
+                consumption = (distance / 100) * consumptionPer100km;
+                totalCost = consumption * fuelCostPerLitre;
+                Console.WriteLine("Fuel consumed: {0} litres \nCost of fuel for said distance: {1} euros", consumption, totalCost);
+            } while (true);
+
+
+        }
     }
 }
