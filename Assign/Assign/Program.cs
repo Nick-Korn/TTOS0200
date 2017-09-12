@@ -30,7 +30,8 @@ namespace Lab1
             //CheckEvenNumber();
             //DoStarTree();
             //ReverseArray();
-            GradeSkiJump();
+            //GradeSkiJump();
+            StarTheGrades();
         }
 
         static void Asker()
@@ -326,6 +327,37 @@ namespace Lab1
                 totalScore = jump + totalScore;
             }
             Console.WriteLine("The total score for the jump is: {0}", totalScore);
+        }
+        static void StarTheGrades()
+        {
+            // Assignment 14
+            int inputtedValue;
+            int[] gradeArray = new int[11];
+            char star = '*';
+            List<int> gradeList = new List<int>();
+            for (int i = 0; i < gradeArray.Length; i++)
+            {
+                Console.WriteLine("Please input a grade: ");
+                inputtedValue = int.Parse(Console.ReadLine());
+                if (inputtedValue >= 0 && inputtedValue <6)
+                {
+                    gradeArray[i] = inputtedValue;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Grade!!");
+                    break;
+                }            }
+            for (int i = 0; i < 6; i++)
+            {
+                gradeList = gradeArray.Where(val => val == i).ToList();
+                Console.Write("{0}:", i);
+                foreach  (int grade in gradeList)
+                {
+                    Console.Write(star);
+                }
+                Console.Write("\n");
+            }
         }
     }
 }
