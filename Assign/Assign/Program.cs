@@ -28,7 +28,8 @@ namespace Lab1
             //CheckMax();
             //AskSumNumbers();
             //CheckEvenNumber();
-            DoStarTree();
+            //DoStarTree();
+            ReverseArray();
         }
 
         static void Asker()
@@ -286,6 +287,23 @@ namespace Lab1
                 }
                Console.WriteLine("\n");
                 
+            }
+        }
+        static void ReverseArray()
+        {
+            //Assignment 12
+            int[] numberArray = new int[5];
+            int inputNumber;
+            for (int i = 0; i < numberArray.Length; i++)
+            {
+                Console.WriteLine("Please input a number: ");
+                inputNumber = int.Parse(Console.ReadLine());
+                numberArray[i] = inputNumber;
+            }
+            Array.Reverse(numberArray);
+            for (int i = 0; i < numberArray.Length; i++)
+            {
+                Console.WriteLine(numberArray[i]);
             }
         }
     }
