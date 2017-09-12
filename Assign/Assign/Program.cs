@@ -35,7 +35,8 @@ namespace Lab1
             //GenerateStarSpruce();
             //GuessRandomNumber();
             //JoinAndArrangeArrays();
-            CheckPalindrome();
+            //CheckPalindrome();
+            PlayHangMan();
         }
 
         static void Asker()
@@ -452,6 +453,49 @@ namespace Lab1
             {
                 Console.WriteLine("The string you inputted wasn't a palindrome!!");
             }
+        }
+        static void PlayHangMan()
+        {
+            // Assignment 19
+            char[] guessesArray = { '_', '_', '_', ' ', '_', '_', '_'};
+            string hangWord = "git gud";
+            char userInput;
+            int wrongGuesses = 0;
+            int tick = 0;
+            Console.WriteLine("HANG MAN - THE GAME");
+            char[] hangArray = hangWord.ToCharArray();
+            do
+            {
+                foreach (char letter in guessesArray) Console.Write(letter);
+                if (guessesArray.SequenceEqual(hangArray))
+                {
+                    Console.WriteLine("\nYOU WON!!");
+                }
+                Console.WriteLine("\nGuess a letter!");
+                userInput = char.Parse(Console.ReadLine());
+                for (int i = 0; i < hangArray.Length; i++)
+                {
+                    if (hangArray[i] == userInput)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Correct");
+                        guessesArray[i] = userInput;
+                        tick = 0;
+                    }
+                    else
+                    {
+                        tick += 1;
+                        if (tick == guessesArray.Length)
+                        {
+                            Console.Clear();
+                            wrongGuesses += 1;
+                            Console.WriteLine("Wrong! You have guessed wrong {0} times!", wrongGuesses);
+                            tick = 0;
+                        }
+                    }
+                }
+            } while (wrongGuesses < 10);
+            Console.WriteLine("Now you hang with the best of them!!");
         }
     }
 }
