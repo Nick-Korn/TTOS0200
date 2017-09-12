@@ -14,12 +14,14 @@ using System.Threading.Tasks;
 
 namespace Lab1
 {
-    class Program
+    class Assignments
     {
         static void Main(string[] args)
         {
+            //Asker();
+            //Grading();
             //ThreeNumbers();
-            AskAge();
+            //AskAge();
             ConvertSeconds();
         }
 
@@ -27,6 +29,7 @@ namespace Lab1
         {
             do
             {
+                //Assignment 1
                 string userInput;
                 int parsedNum;
 
@@ -48,6 +51,7 @@ namespace Lab1
 
         static void Grading()
         {
+            //Asignment 2
             string userInput;
             int parsedNum;
             do
@@ -112,9 +116,9 @@ namespace Lab1
         static void AskAge()
         {
             // Assgiment 4
+            int age = 0;
             do
             {
-                int age = 0;
                 Console.WriteLine("Please input your age: ");
                 age = int.Parse(Console.ReadLine());
 
@@ -140,11 +144,33 @@ namespace Lab1
             int hours = 0;
             int minutes = 0;
             int seconds = 0;
-            Console.WriteLine("Input seconds");
-            inputSeconds = int.Parse(Console.ReadLine());
-            hours = inputSeconds / 3600;
-            minutes = (inputSeconds - hours) / 60;
-            seconds = hours - minutes;
+            do
+            {
+                Console.WriteLine("Input seconds to be converted: ");
+                inputSeconds = int.Parse(Console.ReadLine());
+                if (inputSeconds >= 0 && inputSeconds < 60)
+                {
+                    Console.WriteLine("Seconds: " + inputSeconds);
+                }
+                else if (inputSeconds < 3600 && inputSeconds > 60)
+                {
+                    minutes = inputSeconds / 60;
+                    seconds = inputSeconds % 60;
+                    Console.WriteLine("Minutes: " + minutes + "\nSeconds: " + seconds);
+                }
+                else if (inputSeconds >= 3600)
+                {
+                    hours = inputSeconds / 3600;
+                    minutes = (inputSeconds % 3600) / 60;
+                    seconds = (inputSeconds % 3600) % 60;
+                    Console.WriteLine("Hours:" + hours + "\nMinutes:" + minutes + "\nSeconds:" + seconds);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input.");
+                }
+            } while (true);
         }
+        static void
     }
 }
