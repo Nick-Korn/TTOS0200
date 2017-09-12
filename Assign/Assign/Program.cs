@@ -24,6 +24,7 @@ namespace Lab1
             //AskAge();
             //ConvertSeconds();
             CalculateConsumption();
+            //CheckLeapYear();
         }
 
         static void Asker()
@@ -183,9 +184,42 @@ namespace Lab1
                 distance = int.Parse(Console.ReadLine());
                 consumption = (distance / 100) * consumptionPer100km;
                 totalCost = consumption * fuelCostPerLitre;
-                Console.WriteLine("Fuel consumed: {0} litres \nCost of fuel for said distance: {1} euros", consumption, totalCost);
+                Console.WriteLine("Fuel consumed: {0} litres \nCost of fuel for said distance: {1:c2} euros", consumption, totalCost);
             } while (true);
 
+
+        }
+        static void CheckLeapYear()
+        {
+            //Assignment 7
+            float inputYear;
+            float check4;
+            float check400;
+            float check100;
+            do
+            {
+                Console.WriteLine("Please input a year number: ");
+                inputYear = float.Parse(Console.ReadLine());
+                check4 = inputYear % 4;
+                check400 = inputYear % 400;
+                check100 = inputYear % 100;
+                if (check400 == 0)
+                {
+                    Console.WriteLine("Inputted year is a leap year.");
+                }
+                else if (check100 == 0)
+                {
+                    Console.WriteLine("Inputted year is not a leap year.");
+                }
+                else if (check4 == 0)
+                {
+                    Console.WriteLine("Inputted year is a leap year.");
+                }
+                else
+                {
+                    Console.WriteLine("Inputted year is not a leap year.");
+                }
+            } while (true);
 
         }
     }
