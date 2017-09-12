@@ -32,7 +32,8 @@ namespace Lab1
             //ReverseArray();
             //GradeSkiJump();
             //StarTheGrades();
-            GenerateStarSpruce();
+            // GenerateStarSpruce();
+            GuessRandomNumber();
         }
 
         static void Asker()
@@ -362,7 +363,7 @@ namespace Lab1
         }
         static void GenerateStarSpruce()
         {
-            // Assignment 12 
+            // Assignment 15
             int inputtedValue;
             int root = 2;
             int starCount = 1;
@@ -390,6 +391,38 @@ namespace Lab1
                 }
                 Console.WriteLine(star);
             }
+        }
+        static void GuessRandomNumber()
+        {
+            // Assignment 16
+            int userInput;
+            int attempts = 0;
+            int nro;
+            Random rnd;
+            rnd = new Random();
+            nro = rnd.Next(0, 100);
+            do
+            {
+                Console.WriteLine("Guess a number: ");
+                userInput = int.Parse(Console.ReadLine());
+                attempts += 1;
+                if(nro == userInput)
+                {
+                    Console.WriteLine("Excellent, you guessed the number after {0} guesses.", attempts);
+                    break;
+                }
+                if (nro != userInput)
+                {
+                    if (nro > userInput)
+                    {
+                        Console.WriteLine("The random number is larger then what you guessed!");
+                    }
+                    if (nro < userInput)
+                    {
+                        Console.WriteLine("The random number is smaller than waht you guessed!");
+                    }
+                }
+            } while (true);
         }
     }
 }
