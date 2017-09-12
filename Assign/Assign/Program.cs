@@ -29,7 +29,8 @@ namespace Lab1
             //AskSumNumbers();
             //CheckEvenNumber();
             //DoStarTree();
-            ReverseArray();
+            //ReverseArray();
+            GradeSkiJump();
         }
 
         static void Asker()
@@ -305,6 +306,26 @@ namespace Lab1
             {
                 Console.WriteLine(numberArray[i]);
             }
+        }
+        static void GradeSkiJump()
+        {
+            // Assignment 13
+            int[] jumpScore = new int[5];
+            int inputtedNumber;
+            int totalScore = 0;
+            for (int i = 0; i < jumpScore.Length; i++)
+            {
+                Console.WriteLine("Please input the score: ");
+                inputtedNumber = int.Parse(Console.ReadLine());
+                jumpScore[i] = inputtedNumber;
+            }
+            jumpScore = jumpScore.Where(val => val != jumpScore.Max()).ToArray();
+            jumpScore = jumpScore.Where(val => val != jumpScore.Min()).ToArray();
+            foreach (int jump in jumpScore)
+            {
+                totalScore = jump + totalScore;
+            }
+            Console.WriteLine("The total score for the jump is: {0}", totalScore);
         }
     }
 }
