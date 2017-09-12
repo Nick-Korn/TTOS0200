@@ -34,7 +34,8 @@ namespace Lab1
             //StarTheGrades();
             //GenerateStarSpruce();
             //GuessRandomNumber();
-            JoinAndArrangeArrays();
+            //JoinAndArrangeArrays();
+            CheckPalindrome();
         }
 
         static void Asker()
@@ -432,6 +433,25 @@ namespace Lab1
             Array.Sort(mergedArray);
             Console.Write("\nNumbers in the merged array : ");
             foreach (int number in mergedArray) Console.Write("{0}, ", number);
+        }
+        static void CheckPalindrome()
+        {
+            // Assignment 18
+            string userInput;
+            string reverse;
+            Console.WriteLine("Please input a string:");
+            userInput = Console.ReadLine();
+            char[] charArray = userInput.ToCharArray();
+            Array.Reverse(charArray);
+            reverse = new string(charArray);
+            if (userInput == reverse)
+            {
+                Console.WriteLine("You inputted a palindrome!");
+            }
+            else
+            {
+                Console.WriteLine("The string you inputted wasn't a palindrome!!");
+            }
         }
     }
 }
