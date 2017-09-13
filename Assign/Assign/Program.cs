@@ -32,8 +32,8 @@ namespace Lab1
             //ReverseArray();
             //GradeSkiJump();
             //StarTheGrades();
-            GenerateStarSpruce();
-            //GuessRandomNumber();
+            //GenerateStarSpruce();
+            GuessRandomNumber();
             //JoinAndArrangeArrays();
             //CheckPalindrome();
             //PlayHangMan();
@@ -406,13 +406,13 @@ namespace Lab1
                     Console.WriteLine("Excellent, you guessed the number after {0} guesses.", attempts);
                     break;
                 }
-                if (nro != userInput)
+                else if (nro != userInput)
                 {
                     if (nro > userInput)
                     {
                         Console.WriteLine("The random number is larger then what you guessed!");
                     }
-                    if (nro < userInput)
+                    else if (nro < userInput)
                     {
                         Console.WriteLine("The random number is smaller than waht you guessed!");
                     }
