@@ -470,6 +470,7 @@ namespace Lab1
                 if (guessesArray.SequenceEqual(hangArray))
                 {
                     Console.WriteLine("\nYOU WON!!");
+                    Environment.Exit(0);
                 }
                 Console.WriteLine("\nGuess a letter!");
                 userInput = char.Parse(Console.ReadLine());
