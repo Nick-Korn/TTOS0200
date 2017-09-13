@@ -18,6 +18,7 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
+
             //Asker();
             //Grading();
             //ThreeNumbers();
@@ -33,7 +34,7 @@ namespace Lab1
             //GradeSkiJump();
             //StarTheGrades();
             //GenerateStarSpruce();
-            GuessRandomNumber();
+            //GuessRandomNumber();
             //JoinAndArrangeArrays();
             //CheckPalindrome();
             //PlayHangMan();
