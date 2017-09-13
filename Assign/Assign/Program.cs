@@ -32,11 +32,11 @@ namespace Lab1
             //ReverseArray();
             //GradeSkiJump();
             //StarTheGrades();
-            //GenerateStarSpruce();
+            GenerateStarSpruce();
             //GuessRandomNumber();
             //JoinAndArrangeArrays();
             //CheckPalindrome();
-            PlayHangMan();
+            //PlayHangMan();
         }
 
         static void Asker()
@@ -378,7 +378,7 @@ namespace Lab1
                 for (int j = 0; j < starCount; j++) Console.Write(star);
                 
                 starCount = starCount + 2;
-                Console.WriteLine("\n");
+                Console.Write("\n");
             }
             for (int i = 0; i < root; i++)
             {
