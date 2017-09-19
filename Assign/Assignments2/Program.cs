@@ -118,6 +118,9 @@ namespace Lab2
         }
         static void InitiateStudentBase()
         {
+            // Assignment 5
+            List<string> studentsList = new List<string>();
+            string temp;
             Lab2.Student pena = new Student();
             pena.Name = "Pena Korhonen";
             pena.StudentId = "F684";
@@ -125,7 +128,8 @@ namespace Lab2
             pena.FieldOfStudy = "Cyber-Security";
             pena.Present = true;
             pena.Credits = 55;
-            pena.addToDataBase();
+            temp = pena.ToString();
+            studentsList.Add(temp);
 
             Lab2.Student yusuke = new Student();
             yusuke.Name = "Yusuke Kousaka";
@@ -134,7 +138,8 @@ namespace Lab2
             yusuke.FieldOfStudy = "Modern Art";
             yusuke.Present = true;
             yusuke.Credits = 126;
-            yusuke.addToDataBase();
+            temp = yusuke.ToString();
+            studentsList.Add(temp);
 
             Lab2.Student anne = new Student();
             anne.Name = "Anne Merkel";
@@ -143,9 +148,10 @@ namespace Lab2
             anne.FieldOfStudy = "Law";
             anne.Present = false;
             anne.Credits = 75;
-            anne.addToDataBase();
+            temp = anne.ToString();
+            studentsList.Add(temp);
 
-            anne.printDataBase();
+            anne.printDataBase(studentsList);
 
         }
     }

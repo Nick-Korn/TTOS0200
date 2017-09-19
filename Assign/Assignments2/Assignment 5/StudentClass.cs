@@ -15,7 +15,7 @@ namespace Lab2
         private string fieldOfStudy;
         private bool present;
         private int credits;
-        private List<string> studentsList = new List<string>();
+        
 
 
         public string Name
@@ -75,26 +75,15 @@ namespace Lab2
                 credits = value;
             }
         }
-        public List<string> StudentsList
-        {
-            get
-            {
-                return studentsList;
-            }
-            set
-            {
-                studentsList = value;
-            }
-        }
 
-        public List<string> addToDataBase()
+
+        public string ToString()
         {
             string student = string.Format("Name: {0}, StudentID: {1}, Nationality: {2}, Field of Study: {3}, Present: {4}, Amount of ECTS: {5}", Name, StudentId, Nationality, FieldOfStudy, present, Credits);
-            StudentsList.Add(student);
-            return StudentsList;
+            return student;
         }
 
-        public void printDataBase()
+        public void printDataBase(List<string> StudentsList)
         {
             string[] studentArray = StudentsList.ToArray();
             for (int i = 0; i < studentArray.Length; i++)
