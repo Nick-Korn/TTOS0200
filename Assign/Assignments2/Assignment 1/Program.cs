@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+ * lab2
+ * 
+ * Created by: Niko Liimatainen 20/09/2017
+ * Modifeid by: Niko Liimatainen 21/09/2017
+ * 
+ * Assignments of lab #2
+ */
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +22,14 @@ namespace Lab2
         static void Main(string[] args)
         {
             //UseSauna();
-            UseWashingMachine();
+            //UseWashingMachine();
+            SpecifyCar();
         }
 
         static void UseSauna()
         {
+
+            //Assignment 1
             Lab2.SaunaHeater harvia = new SaunaHeater();
             int userInput;
             harvia.HeaterState();
@@ -57,6 +71,7 @@ namespace Lab2
         }
         static void UseWashingMachine()
         {
+            // Assignment 2
             int userInput;
             Lab2.WashingMachine siemens = new WashingMachine();
             Console.Clear();
@@ -75,8 +90,30 @@ namespace Lab2
             siemens.StartWash();
             siemens.TurnPowerOff();
             siemens.TurnWaterOff();
+        }
+        static void SpecifyCar()
+        {
+            // Assignment 4
+            Lab2.Vehicle porsche = new Vehicle();
+            porsche.Name = "Porsche";
+            porsche.Speed = 260;
+            porsche.Tyres = 4;
+            porsche.PrintData();
+            porsche.ToString();
 
+            Lab2.Vehicle triCycle = new Vehicle();
+            triCycle.Name = "Tricycle";
+            triCycle.Speed = 15;
+            triCycle.Tyres = 3;
+            triCycle.PrintData();
+            triCycle.ToString();
 
+            Lab2.Vehicle harleyDavidson = new Vehicle();
+            harleyDavidson.Name = "Harley-Davidson";
+            harleyDavidson.Speed = 200;
+            harleyDavidson.Tyres = 2;
+            harleyDavidson.PrintData();
+            harleyDavidson.ToString();
         }
     }
 }
