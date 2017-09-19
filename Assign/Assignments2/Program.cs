@@ -4,7 +4,7 @@
  * Created by: Niko Liimatainen 20/09/2017
  * Modifeid by: Niko Liimatainen 21/09/2017
  * 
- * Assignments of lab #2
+ * OOP TTOS0200 Assignments of lab #2
  */
 
 
@@ -23,7 +23,8 @@ namespace Lab2
         {
             //UseSauna();
             //UseWashingMachine();
-            SpecifyCar();
+            //SpecifyCar();
+            InitiateStudentBase();
         }
 
         static void UseSauna()
@@ -114,6 +115,38 @@ namespace Lab2
             harleyDavidson.Tyres = 2;
             harleyDavidson.PrintData();
             harleyDavidson.ToString();
+        }
+        static void InitiateStudentBase()
+        {
+            Lab2.Student pena = new Student();
+            pena.Name = "Pena Korhonen";
+            pena.StudentId = "F684";
+            pena.Nationality = "Finaland";
+            pena.FieldOfStudy = "Cyber-Security";
+            pena.Present = true;
+            pena.Credits = 55;
+            pena.addToDataBase();
+
+            Lab2.Student yusuke = new Student();
+            yusuke.Name = "Yusuke Kousaka";
+            yusuke.StudentId = "G354";
+            yusuke.Nationality = "Japan";
+            yusuke.FieldOfStudy = "Modern Art";
+            yusuke.Present = true;
+            yusuke.Credits = 126;
+            yusuke.addToDataBase();
+
+            Lab2.Student anne = new Student();
+            anne.Name = "Anne Merkel";
+            anne.StudentId = "F577";
+            anne.Nationality = "Germany";
+            anne.FieldOfStudy = "Law";
+            anne.Present = false;
+            anne.Credits = 75;
+            anne.addToDataBase();
+
+            anne.printDataBase();
+
         }
     }
 }
