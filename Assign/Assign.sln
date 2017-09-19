@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assign", "Assign\Assign.csproj", "{39AB3BE9-95B6-4691-B528-D594CC280946}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab 1", "Assign\Lab 1.csproj", "{39AB3BE9-95B6-4691-B528-D594CC280946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments2", "Assignments2\Assignments2.csproj", "{E0E4A23F-BEF3-4B54-9621-F803A67FC28B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab 2", "Assignments2\Lab 2.csproj", "{E0E4A23F-BEF3-4B54-9621-F803A67FC28B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

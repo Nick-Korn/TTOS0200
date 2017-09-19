@@ -10,6 +10,12 @@ namespace Lab2
     {
         static void Main(string[] args)
         {
+            //UseSauna();
+            UseWashingMachine();
+        }
+
+        static void UseSauna()
+        {
             Lab2.SaunaHeater harvia = new SaunaHeater();
             int userInput;
             harvia.HeaterState();
@@ -47,7 +53,29 @@ namespace Lab2
                     Console.WriteLine("Invalid input!!");
                 }
 
-            } while (harvia.powerState == true);
+            } while (harvia.PowerState == true);
+        }
+        static void UseWashingMachine()
+        {
+            int userInput;
+            Lab2.WashingMachine siemens = new WashingMachine();
+            Console.Clear();
+            Console.WriteLine("Please Input the washing mode you wish to select: ");
+            for (int i = 0; i < siemens.WashingProgram.Length; i++)
+            {
+                Console.WriteLine("Program {0}. {1}", i, siemens.WashingProgram[i]);
+            }
+            userInput = int.Parse(Console.ReadLine());
+            siemens.SelectMode(userInput);
+            Console.Clear();
+            siemens.TurnPowerOn();
+            siemens.TurnWaterOn();
+            siemens.AddSoftener();
+            siemens.AddWashingPowder();
+            siemens.StartWash();
+            siemens.TurnPowerOff();
+            siemens.TurnWaterOff();
+
 
         }
     }

@@ -35,16 +35,16 @@ namespace Lab2
             }
         }
 
-        public bool powerState { get; set; }
+        public bool PowerState { get; set; }
 
         public void HeaterState()
         {
             Console.WriteLine("The state of the Sauna heater.");
-            if (powerState == false)
+            if (PowerState == false)
             {
                 Console.WriteLine("Sauna is off!");
             }
-            else if (powerState == true)
+            else if (PowerState == true)
             {
                 Console.WriteLine("Sauna is on!");
                 Console.WriteLine("Current temperature is {0} degreese celsius.", heat);
@@ -54,12 +54,12 @@ namespace Lab2
         
         public void TurnOn()
         {
-            powerState = true;
+            PowerState = true;
         }
 
         public void TurnOff()
         {
-            powerState = false;
+            PowerState = false;
         }
 
         public void IncreaseHeat()
