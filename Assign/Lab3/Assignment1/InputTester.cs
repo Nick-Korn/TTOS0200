@@ -11,6 +11,7 @@ namespace Lab3
     {
         private char comma = ',';
         private char slash = '/';
+
         public bool IsItAInteger(string UserInput)
         {
             char[] inputArray = UserInput.ToCharArray();

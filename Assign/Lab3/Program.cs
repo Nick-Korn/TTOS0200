@@ -11,7 +11,9 @@ namespace Lab3
     {
         static void Main(string[] args)
         {
-            UseInputTester();
+            //UseInputTester();
+            //UseElevator();
+            UseAmplifier();
         }
 
         static void UseInputTester ()
@@ -28,6 +30,26 @@ namespace Lab3
                 Console.WriteLine("Your input {0} is a date: {1}\n", userInput, dateResult);
             }
 
+        }
+        static void UseElevator ()
+        {
+            Lab3.DynamoElevator leftElevator = new DynamoElevator();
+            while (true)
+            {
+                Console.WriteLine("You are on floor {0}", leftElevator.Floor);
+                Console.WriteLine("Please Input the floor you'd like to go: ");
+                leftElevator.Floor = int.Parse(Console.ReadLine());
+            }
+        }
+        static void UseAmplifier()
+        {
+            Lab3.Amplifier ahuja = new Amplifier();
+            while (true)
+            {
+                Console.WriteLine("Amplifier volume is: {0}", ahuja.Volume);
+                Console.Write("Set amplifier volume to: ");
+                ahuja.Volume = int.Parse(Console.ReadLine());
+            }
         }
     }
 }
