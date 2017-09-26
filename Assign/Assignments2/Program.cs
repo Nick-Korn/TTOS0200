@@ -6,9 +6,6 @@
  * 
  * OOP TTOS0200 Assignments of lab #2
  */
-
-
-
 using System;
 using System.Collections.Generic;
 using System.Linq;

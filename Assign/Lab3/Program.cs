@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * lab3
+ * 
+ * Created by: Niko Liimatainen 25/09/2017
+ * Modifeid by: Niko Liimatainen 26/09/2017
+ * 
+ * OOP TTOS0200 Assignments of lab #3
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
