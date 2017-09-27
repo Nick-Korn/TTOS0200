@@ -35,7 +35,6 @@ namespace Lab3
             // Settings for DateTime since my computers loclaization is in English format
             culture = CultureInfo.CreateSpecificCulture("fi-FI");
             styles = DateTimeStyles.None;
-            Console.WriteLine(CultureInfo.CurrentCulture.Name);
             bool parsedInput = DateTime.TryParse(UserInput, culture, styles, out DateTime dateValue);
             char[] inputArray = UserInput.ToCharArray();
             for (int i = 0; i < inputArray.Length; i++)
