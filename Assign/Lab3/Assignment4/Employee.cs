@@ -18,5 +18,11 @@ namespace Lab3
             Profession = profession;
             Salary = salary;
         }
+
+        public virtual string PrintDataBase()
+        {
+            string outPut = string.Format("Name: {0}, Profession: {1}, Salary {2}", Name, Profession, Salary);
+            return outPut;
+        }
     }
 }

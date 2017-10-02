@@ -21,7 +21,8 @@ namespace Lab3
         {
             //UseInputTester();
             //UseElevator();
-            UseAmplifier();
+            //UseAmplifier();
+            UseEmployeeBase();
         }
 
         static void UseInputTester ()
@@ -58,6 +59,19 @@ namespace Lab3
                 Console.Write("Set amplifier volume to: ");
                 ahuja.Volume = int.Parse(Console.ReadLine());
             }
+        }
+        static void UseEmployeeBase()
+        {
+            Lab3.Employee Kirsi = new Employee("Kirsi Kernel", "Teacher", 1200);
+            string dataPrint1 = Kirsi.PrintDataBase();
+            Console.WriteLine(dataPrint1);
+            Lab3.Employee Jussi = new Boss("Jussi Jurkka", "Head of Institute", 9000, "Audi", 5000);
+            string dataPrint2 = Jussi.PrintDataBase();
+            Console.WriteLine(dataPrint2);
+            Kirsi.Profession = "Principal Teacher";
+            Kirsi.Salary = 2200;
+            string dataPrint3 = Kirsi.PrintDataBase();
+            Console.WriteLine(dataPrint3);
         }
     }
 }

@@ -20,5 +20,10 @@ namespace Lab3
             Car = car;
             Bonus = bonus;
         }
+        public override String PrintDataBase()
+        {
+            string outPut = string.Format("Car: {0}, Bonus: {1}", Car, Bonus);
+            return base.PrintDataBase() + ", " + outPut;
+        }
     }
 }

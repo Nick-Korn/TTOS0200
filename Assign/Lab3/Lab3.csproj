@@ -45,6 +45,8 @@
     <Compile Include="Assignment1\InputTester.cs" />
     <Compile Include="Assignment2\DynamoElevator.cs" />
     <Compile Include="Assignment3\Amplifier.cs" />
+    <Compile Include="Assignment4\Boss.cs" />
+    <Compile Include="Assignment4\Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
