@@ -22,7 +22,8 @@ namespace Lab3
             //UseInputTester();
             //UseElevator();
             //UseAmplifier();
-            UseEmployeeBase();
+            //UseEmployeeBase();
+            CreateVehicle();
         }
 
         static void UseInputTester ()
@@ -72,6 +73,21 @@ namespace Lab3
             Kirsi.Salary = 2200;
             string dataPrint3 = Kirsi.PrintDataBase();
             Console.WriteLine(dataPrint3);
+        }
+        static void CreateVehicle()
+        {
+            Lab3.Vehicle Jopo = new Bike("Jopo", "Street", "Blue", 2016, false, " ");
+            string dataPrint1 = Jopo.PrintVehicleData();
+            Console.WriteLine(dataPrint1);
+            Lab3.Vehicle Tunturi = new Bike("Tunturi", "StreetPower", "Black", 2010, true, "Shimano");
+            string dataPrint2 = Tunturi.PrintVehicleData();
+            Console.WriteLine(dataPrint2);
+            Lab3.Vehicle Suvi = new Boat("Suvi", "S900", "White", 1990, 3, "Rowboat");
+            string dataPrint3 = Suvi.PrintVehicleData();
+            Console.WriteLine(dataPrint3);
+            Lab3.Vehicle Yamaha = new Boat("Jopo", "Model 1000", "Yellow", 2010, 5, "Motorboat");
+            string dataPrint4 = Yamaha.PrintVehicleData();
+            Console.WriteLine(dataPrint4);
         }
     }
 }

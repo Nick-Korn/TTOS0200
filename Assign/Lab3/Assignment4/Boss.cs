@@ -14,9 +14,6 @@ namespace Lab3
         public Boss(string name, string profession, int salary, string car, int bonus) 
             : base(name, profession, salary)
         {
-            Name = name;
-            Profession = profession;
-            Salary = salary;
             Car = car;
             Bonus = bonus;
         }
