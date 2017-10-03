@@ -3,6 +3,8 @@
  * 
  * Created by: Niko Liimatainen 25/09/2017
  * Modifeid by: Niko Liimatainen 26/09/2017
+ *              -||- 2/10/2017
+ *              -||- 3/10/2017
  * 
  * OOP TTOS0200 Assignments of lab #3
  */
@@ -23,11 +25,13 @@ namespace Lab3
             //UseElevator();
             //UseAmplifier();
             //UseEmployeeBase();
-            CreateVehicle();
+            //CreateVehicle();
+            UseRadio();
         }
 
         static void UseInputTester ()
         {
+            //Assginment 1
             string userInput;
             Lab3.InputTester test = new InputTester();
             while (true)
@@ -43,6 +47,7 @@ namespace Lab3
         }
         static void UseElevator ()
         {
+            //Assginment 2
             Lab3.DynamoElevator leftElevator = new DynamoElevator();
             while (true)
             {
@@ -53,6 +58,7 @@ namespace Lab3
         }
         static void UseAmplifier()
         {
+            //Assginment 3
             Lab3.Amplifier ahuja = new Amplifier();
             while (true)
             {
@@ -63,6 +69,7 @@ namespace Lab3
         }
         static void UseEmployeeBase()
         {
+            //Assginment 4
             Lab3.Employee Kirsi = new Employee("Kirsi Kernel", "Teacher", 1200);
             string dataPrint1 = Kirsi.PrintDataBase();
             Console.WriteLine(dataPrint1);
@@ -76,6 +83,7 @@ namespace Lab3
         }
         static void CreateVehicle()
         {
+            //Assginment 5
             Lab3.Vehicle Jopo = new Bike("Jopo", "Street", "Blue", 2016, false, " ");
             string dataPrint1 = Jopo.PrintVehicleData();
             Console.WriteLine(dataPrint1);
@@ -88,6 +96,36 @@ namespace Lab3
             Lab3.Vehicle Yamaha = new Boat("Jopo", "Model 1000", "Yellow", 2010, 5, "Motorboat");
             string dataPrint4 = Yamaha.PrintVehicleData();
             Console.WriteLine(dataPrint4);
+        }
+        static void UseRadio()
+        {
+            //Assginment 6
+            Lab3.Radio Philips = new Radio();
+            bool userSelect;
+            Philips.PowerOn();
+            Console.WriteLine("Power on!");
+            while (Philips.PowerState)
+            {
+                Console.WriteLine("Please select your action. \n\nPress any number key to set parameters. Press anything else to power off.");
+                userSelect = int.TryParse(Console.ReadLine(), out int number);
+                if (userSelect)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Please set the volume ({0}-{1})", Philips.MinVolume, Philips.MaxVolume);
+                    int userInput = int.Parse(Console.ReadLine());
+                    Philips.Volume = userInput;
+                    Console.WriteLine(Philips.InputMessage());
+                    Console.WriteLine("Please select the channel ({0}-{1})", Philips.MinFrequency, Philips.MaxFrequency);
+                    int userInput2 = int.Parse(Console.ReadLine());
+                    Philips.ChannelFrequency = userInput2;
+                    Console.WriteLine(Philips.InputMessage() + '\n');
+                }
+                else
+                {
+                    Philips.PowerOff();
+                }
+            }
+            Console.WriteLine("Power off!");
         }
     }
 }
