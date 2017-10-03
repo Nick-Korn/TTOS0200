@@ -51,6 +51,11 @@
     <Compile Include="Assignment5\Boat.cs" />
     <Compile Include="Assignment5\Vehicle.cs" />
     <Compile Include="Assignment6\Radio.cs" />
+    <Compile Include="Assignment7\Comic.cs" />
+    <Compile Include="Assignment7\Disc.cs" />
+    <Compile Include="Assignment7\Novel.cs" />
+    <Compile Include="Assignment7\Readable.cs" />
+    <Compile Include="Assignment7\Technology.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

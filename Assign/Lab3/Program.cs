@@ -26,7 +26,8 @@ namespace Lab3
             //UseAmplifier();
             //UseEmployeeBase();
             //CreateVehicle();
-            UseRadio();
+            //UseRadio();
+            CreateBookcaseItems();
         }
 
         static void UseInputTester ()
@@ -126,6 +127,24 @@ namespace Lab3
                 }
             }
             Console.WriteLine("Power off!");
+        }
+        static void CreateBookcaseItems ()
+        {
+            //Assignmnet 7
+            Lab3.Disc titanic = new Disc("Titanic", "Dvd", "Movie", "UDF bridge", "epic romance-disaster film", 194);
+            Console.WriteLine(titanic.PrintData());
+            Lab3.Disc reise = new Disc("Rammstein - 'Reise, Reise'", "Audio CD", "Studio Album", "MP3", "industrial metal", 2004);
+            Console.WriteLine(reise.PrintData());
+            Lab3.Technology gpu = new Technology("Graphics card", "MSI GamingX Geforce GTX 1080", 2016, true, true);
+            Console.WriteLine(gpu.PrintData());
+            Lab3.Technology smartPhone = new Technology("Smart Phone", "Honor 7", 2014, false, false);
+            Console.WriteLine(smartPhone.PrintData());
+            Lab3.Readable magazine = new Readable("Emp product magazine", "Magazine", "Magazine", "Emp FI", 332, 2017);
+            Console.WriteLine(magazine.PrintData());
+            Lab3.Readable novel = new Novel("A game of thrones", "Novel", "Paperback", "Harper Voyager", 694, 1996, "George R. R. Martin", true);
+            Console.WriteLine(novel.PrintData());
+            Lab3.Readable manga = new Comic("Yotsuba&! Volume #1", "Comic", "Paperback", "ADV MANGA", 231, 2005, "Kiyohiko Azuma", "Kiyohiko Azuma", true);
+            Console.WriteLine(manga.PrintData());
         }
     }
 }
