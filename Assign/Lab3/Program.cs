@@ -72,31 +72,24 @@ namespace Lab3
         {
             //Assginment 4
             Lab3.Employee Kirsi = new Employee("Kirsi Kernel", "Teacher", 1200);
-            string dataPrint1 = Kirsi.PrintDataBase();
-            Console.WriteLine(dataPrint1);
+            Console.WriteLine(Kirsi.PrintDataBase());
             Lab3.Employee Jussi = new Boss("Jussi Jurkka", "Head of Institute", 9000, "Audi", 5000);
-            string dataPrint2 = Jussi.PrintDataBase();
-            Console.WriteLine(dataPrint2);
+            Console.WriteLine(Jussi.PrintDataBase());
             Kirsi.Profession = "Principal Teacher";
             Kirsi.Salary = 2200;
-            string dataPrint3 = Kirsi.PrintDataBase();
-            Console.WriteLine(dataPrint3);
+            Console.WriteLine(Kirsi.PrintDataBase());
         }
         static void CreateVehicle()
         {
             //Assginment 5
             Lab3.Vehicle Jopo = new Bike("Jopo", "Street", "Blue", 2016, false, " ");
-            string dataPrint1 = Jopo.PrintVehicleData();
-            Console.WriteLine(dataPrint1);
+            Console.WriteLine(Jopo.PrintVehicleData());
             Lab3.Vehicle Tunturi = new Bike("Tunturi", "StreetPower", "Black", 2010, true, "Shimano");
-            string dataPrint2 = Tunturi.PrintVehicleData();
-            Console.WriteLine(dataPrint2);
+            Console.WriteLine(Tunturi.PrintVehicleData());
             Lab3.Vehicle Suvi = new Boat("Suvi", "S900", "White", 1990, 3, "Rowboat");
-            string dataPrint3 = Suvi.PrintVehicleData();
-            Console.WriteLine(dataPrint3);
+            Console.WriteLine(Suvi.PrintVehicleData());
             Lab3.Vehicle Yamaha = new Boat("Jopo", "Model 1000", "Yellow", 2010, 5, "Motorboat");
-            string dataPrint4 = Yamaha.PrintVehicleData();
-            Console.WriteLine(dataPrint4);
+            Console.WriteLine(Yamaha.PrintVehicleData());
         }
         static void UseRadio()
         {
