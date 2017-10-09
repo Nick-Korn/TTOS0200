@@ -7,8 +7,9 @@ namespace OOdemot
   {
     static void Main(string[] args)
     {
-      TestaaKiuas();
-      JAMK.IT.TestCat.Testaa();
+            //TestaaKiuas();
+            //JAMK.IT.TestCat.Testaa();
+            TestThing();
     }
 
     //Lab3 Tehtävä 1: Kiuas-luokan testaus
@@ -28,5 +29,13 @@ namespace OOdemot
       kiuas.Kosteus = 101;
       Console.WriteLine("Kiukaan kosteus {0}", kiuas.Kosteus);
     }
+    static void TestThing()
+        {
+            OOdemot.Thing t = new Thing();
+            Console.WriteLine(t.ToString());
+            t.Name = "Something";
+            Console.WriteLine(t.Name);
+            Console.WriteLine(t.ToString());
+        }
   }
 }
