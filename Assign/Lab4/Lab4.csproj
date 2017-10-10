@@ -44,6 +44,11 @@
   <ItemGroup>
     <Compile Include="Assignment1\Tyre.cs" />
     <Compile Include="Assignment1\Vehicle.cs" />
+    <Compile Include="Assignment2\Bread.cs" />
+    <Compile Include="Assignment2\Drink.cs" />
+    <Compile Include="Assignment2\Fridge.cs" />
+    <Compile Include="Assignment2\Meat.cs" />
+    <Compile Include="Assignment2\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

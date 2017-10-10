@@ -24,7 +24,7 @@ namespace Lab4
         }
         public string AddedTyre(string tyreName)
         {
-            return string.Format("Tyre {0} added to vehicle {1}",tyreName, VehicleName);
+            return string.Format("Tyre {0} added to vehicle {1}", tyreName, VehicleName);
         }
 
         public override string ToString()

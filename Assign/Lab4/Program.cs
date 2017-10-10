@@ -18,7 +18,8 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
-            CreateVehicle();
+            //CreateVehicle();
+            OpenFridge();
         }
         static void CreateVehicle()
         {
@@ -43,6 +44,17 @@ namespace Lab4
             ducati.Tyres.Add(mic2);
             Console.WriteLine(ducati.AddedTyre(mic2.TyreName));
             Console.WriteLine(ducati.ToString());
+        }
+        static void OpenFridge()
+        {
+            Fridge samsung = new Fridge("Samsung");
+            samsung.Products.Add(new Bread("bread", "Vaasan", 1, "Ryebread"));
+            samsung.Products.Add(new Bread("bread", "Fazer", 1, "Whitebread"));
+            samsung.Products.Add(new Meat("meat", "Kariniemen", 2, "Chicken", 800));
+            samsung.Products.Add(new Meat("meat", "Snellman", 2, "Pork", 800));
+            samsung.Products.Add(new Drink("drink", "Valio", 3, "milk", 1.5f));
+            samsung.Products.Add(new Drink("drink", "Good Morgon", 3, "orange juice", 1.75f));
+            Console.WriteLine(samsung.ToString());
         }
     }
 }
