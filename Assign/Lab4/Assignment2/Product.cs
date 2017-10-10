@@ -20,7 +20,7 @@ namespace Lab4
         }
         public override string ToString()
         {
-            return string.Format(" -Type of product: {0}, Product producer: {1}, Amount of product in fridge: {2},", ProductType, ProductProducer, ProductAmount);
+            return string.Format(" -Type of product: {0}, Product producer: {1}, Amount of product in fridge:  {2},", ProductType, ProductProducer, ProductAmount);
         }
     }
 }

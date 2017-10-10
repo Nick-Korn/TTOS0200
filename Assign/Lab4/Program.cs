@@ -47,7 +47,7 @@ namespace Lab4
         }
         static void OpenFridge()
         {
-            Fridge samsung = new Fridge("Samsung");
+            Fridge samsung = new Fridge("Samsung ");
             samsung.Products.Add(new Bread("bread", "Vaasan", 1, "Ryebread"));
             samsung.Products.Add(new Bread("bread", "Fazer", 1, "Whitebread"));
             samsung.Products.Add(new Meat("meat", "Kariniemen", 2, "Chicken", 800));
