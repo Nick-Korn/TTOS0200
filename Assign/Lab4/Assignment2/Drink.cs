@@ -18,7 +18,7 @@ namespace Lab4
         }
         public override string ToString()
         {
-            return base.ToString() + " " + string.Format("What type of drink:{0}, Amount of drink in fridge: {1}L", DrinkType, DrinkVelocity);
+            return base.ToString() + " " + string.Format("What type of drink:{0}, Amount of drink in fridge: {1}L ", DrinkType, DrinkVelocity);
         }
     }
 }

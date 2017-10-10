@@ -17,7 +17,7 @@ namespace Lab4
         }
         public override string ToString()
         {
-            Console.WriteLine(string.Format("\nContents of the {0} fridge:", FridgeModel));
+            Console.WriteLine(string.Format("\nContents of the {0} fridge: ", FridgeModel));
             string retval = "";
             foreach (Product product in Products)
             {
@@ -25,5 +25,6 @@ namespace Lab4
             }
             return retval;
         }
+
     }
 }

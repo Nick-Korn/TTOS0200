@@ -16,7 +16,7 @@ namespace Lab4
         }
         public override string ToString()
         {
-            return base.ToString() + " " + string.Format("Type of bread: {0}", BreadType); 
+            return base.ToString() + " " + string.Format("Type of bread: {0} ", BreadType); 
         }
     }
 }
