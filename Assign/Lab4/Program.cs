@@ -20,7 +20,8 @@ namespace Lab4
         {
             //CreateVehicle();
             //OpenFridge();
-            UseHockeyTeams();
+            //UseHockeyTeams();
+            CreateManKind();
         }
         static void CreateVehicle()
         {
@@ -121,6 +122,29 @@ namespace Lab4
                 else
                     Console.WriteLine("Invalid input");
             }
+        }
+        static void CreateManKind()
+        {
+            Human jonne = new Human(12, 54.6f, 156.3f, "Jonne");
+            Console.WriteLine(jonne.ToString());
+            jonne.DoAge();
+            Console.WriteLine(jonne.ToString());
+            jonne.Move();
+            Human allu = new Baby(2, 13.6f, 98.3f, "Allu", "Pampers");
+            Console.WriteLine(allu.ToString());
+            allu.DoAge();
+            Console.WriteLine(allu.ToString());
+            allu.Move();
+            Human make = new Adult(34, 102.5f, 192.5f, "Make" , "Corolla");
+            Console.WriteLine(make.ToString());
+            make.DoAge();
+            Console.WriteLine(make.ToString());
+            make.Move();
+            Human ritva = new Adult(55, 72.4f, 167.2f, "Ritva", "Lada");
+            Console.WriteLine(ritva.ToString());
+            ritva.DoAge();
+            Console.WriteLine(ritva.ToString());
+            ritva.Move();
         }
     }
 }

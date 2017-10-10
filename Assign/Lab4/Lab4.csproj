@@ -51,6 +51,10 @@
     <Compile Include="Assignment2\Product.cs" />
     <Compile Include="Assignment3\Player.cs" />
     <Compile Include="Assignment3\Team.cs" />
+    <Compile Include="Assignment4\Adult.cs" />
+    <Compile Include="Assignment4\Baby.cs" />
+    <Compile Include="Assignment4\Human.cs" />
+    <Compile Include="Assignment4\Mammal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
