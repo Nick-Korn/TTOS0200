@@ -20,8 +20,8 @@ namespace Lab4
         {
             //CreateVehicle();
             //OpenFridge();
-            //UseHockeyTeams();
-            CreateManKind();
+            UseHockeyTeams();
+            //CreateManKind();
         }
         static void CreateVehicle()
         {
