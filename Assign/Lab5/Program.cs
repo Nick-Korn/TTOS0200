@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * lab5
+ * 
+ * Created by: Niko Liimatainen 11/10/2017
+ * Modifeid by: Niko Liimatainen 23/10/2017
+ * 
+ * OOP TTOS0200 Assignments of lab #4
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +21,10 @@ namespace Lab5
         {
             //TestMiniAsio();
             //CreateCd();
-            PlayCards();
+            //PlayCards();
+            UseHockeyTeam();
         }
+        //Assignment 1
         static void TestMiniAsio()
         {
             List<Student> students = new List<Student>();
@@ -77,6 +87,7 @@ namespace Lab5
                 }
             }
         }
+        //Assignment 2
         static void CreateCd()
         {
             Cd rosenrot = new Cd("Rosenrot","Rammstein");
@@ -93,11 +104,27 @@ namespace Lab5
             rosenrot.CdSongs.Add(new Song("Ein Leid", 3.43f));
             Console.WriteLine(rosenrot.ToString());
         }
+        //Assignment 3
         static void PlayCards()
         {
             CardDeck cards = new CardDeck();
             cards.AddCards();
             cards.ToString();
+        }
+        //Assignment 4
+        static void UseHockeyTeam()
+        {
+            Team jyp = new Team("JYP", "Jyväskylä");
+            jyp.GetPlayers();
+            Console.WriteLine(jyp.ToString());
+            jyp.RemovePlayer("Laurikainen");
+            Console.WriteLine(jyp.ToString());
+            jyp.RemovePlayer("Allen");
+            Console.WriteLine(jyp.ToString());
+            jyp.AddPlayer("Random", "Hokkanne", "Mestari", "B");
+            Console.WriteLine(jyp.ToString());
+            jyp.SaveCsv();
+            jyp.ReadCsv();
         }
     }
 }
