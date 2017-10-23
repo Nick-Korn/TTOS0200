@@ -10,7 +10,8 @@ namespace Lab5
     {
         static void Main(string[] args)
         {
-            TestMiniAsio();
+            //TestMiniAsio();
+            CreateCd();
         }
         static void TestMiniAsio()
         {
@@ -73,6 +74,22 @@ namespace Lab5
                     Console.WriteLine(student.ToString());
                 }
             }
+        }
+        static void CreateCd()
+        {
+            Cd rosenrot = new Cd("Rosenrot","Rammstein");
+            rosenrot.CdSongs.Add(new Song("Benzin", 3.46f));
+            rosenrot.CdSongs.Add(new Song("Mann gegen Mann", 3.50f));
+            rosenrot.CdSongs.Add(new Song("Rosenrot", 3.54f));
+            rosenrot.CdSongs.Add(new Song("Spring", 5.24f));
+            rosenrot.CdSongs.Add(new Song("Wo Bist Du?", 3.55f));
+            rosenrot.CdSongs.Add(new Song("Stirb nicht vor mir", 4.05f));
+            rosenrot.CdSongs.Add(new Song("Zerstören", 5.28f));
+            rosenrot.CdSongs.Add(new Song("Hilf mir", 4.43f));
+            rosenrot.CdSongs.Add(new Song("Te quiero Puta!", 3.55f));
+            rosenrot.CdSongs.Add(new Song("Feuer und Wasser", 5.17f));
+            rosenrot.CdSongs.Add(new Song("Ein Leid", 3.43f));
+            Console.WriteLine(rosenrot.ToString());
         }
     }
 }
