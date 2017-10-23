@@ -8,10 +8,12 @@ namespace Lab5
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             //TestMiniAsio();
-            CreateCd();
+            //CreateCd();
+            PlayCards();
         }
         static void TestMiniAsio()
         {
@@ -90,6 +92,12 @@ namespace Lab5
             rosenrot.CdSongs.Add(new Song("Feuer und Wasser", 5.17f));
             rosenrot.CdSongs.Add(new Song("Ein Leid", 3.43f));
             Console.WriteLine(rosenrot.ToString());
+        }
+        static void PlayCards()
+        {
+            CardDeck cards = new CardDeck();
+            cards.AddCards();
+            cards.ToString();
         }
     }
 }
