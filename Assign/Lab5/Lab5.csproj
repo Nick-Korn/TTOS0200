@@ -47,6 +47,9 @@
     <Compile Include="Assignment3\CardDeck.cs" />
     <Compile Include="Assignment4\Player.cs" />
     <Compile Include="Assignment4\Team.cs" />
+    <Compile Include="Assignment5\Person.cs" />
+    <Compile Include="Assignment5\RandomDict.cs" />
+    <Compile Include="Assignment5\RandomList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

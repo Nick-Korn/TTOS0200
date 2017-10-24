@@ -22,7 +22,8 @@ namespace Lab5
             //TestMiniAsio();
             //CreateCd();
             //PlayCards();
-            UseHockeyTeam();
+            //UseHockeyTeam();
+            RandomizePersonCollection();
         }
         //Assignment 1
         static void TestMiniAsio()
@@ -125,6 +126,25 @@ namespace Lab5
             Console.WriteLine(jyp.ToString());
             jyp.SaveCsv();
             jyp.ReadCsv();
+        }
+        //Assignment 5
+        static void RandomizePersonCollection()
+        {
+            RandomList x = new RandomList();
+            Console.WriteLine("List collection: ");
+            x.PopulateList();
+            Console.WriteLine(string.Format(" - Adding time: {0}ms \n - PersonsCount: {1}\n", x.Time, x.PersonCount));
+            Console.WriteLine("Finding persons in collection (by firstname): \n");
+            Console.WriteLine(x.FindThousandRandom());
+            Console.WriteLine(string.Format(" - Persons tried to find: 1000 \n - Total Finding time: {0} ms\n", x.Time));
+
+            RandomDict y = new RandomDict();
+            Console.WriteLine("Dict collection: ");
+            y.PopulateDict();
+            Console.WriteLine(string.Format(" - Adding time: {0}ms \n - PersonsCount: {1}\n", y.Time, y.PersonCount));
+            Console.WriteLine("Finding persons in collection (by firstname): \n");
+            Console.WriteLine(y.FindThousandRandom());
+            Console.WriteLine(string.Format(" - Persons tried to find: 1000 \n - Total Finding time: {0} ms\n", y.Time));
         }
     }
 }
