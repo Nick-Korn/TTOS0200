@@ -9,10 +9,15 @@ namespace Lab5
     class CardDeck
     {
         public string Card { get; set; }
+        static Random Random { get; set; }
         public List<string> Cards { get; set; }
         public CardDeck()
         {
             Cards = new List<string>();
+        }
+        static CardDeck()
+        {
+            Random = new Random();
         }
 
        public void AddCards()
@@ -32,6 +37,17 @@ namespace Lab5
             for (int i = 0; i < 13; i++)
             {
                 Cards.Add(string.Format("Club#{0}", i+1));
+            }
+        }
+        public void ShuffleDeck()
+        {
+            int n = Cards.Count();
+            for (int i = 0; i < n; i++)
+            {
+                int r = i + Random.Next(n - i);
+                string t = Cards[r];
+                Cards[r] = Cards[i];
+                Cards[i] = t;
             }
         }
         public override string ToString()

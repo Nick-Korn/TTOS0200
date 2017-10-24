@@ -51,8 +51,6 @@ namespace Lab5
                 {
                     retval += string.Format(" - Found person with {0} firstname: {1} \n", person.FirstName, person.ToString());
                 }
-                
-
             }
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;

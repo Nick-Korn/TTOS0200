@@ -21,9 +21,9 @@ namespace Lab5
         {
             //TestMiniAsio();
             //CreateCd();
-            //PlayCards();
+            PlayCards();
             //UseHockeyTeam();
-            RandomizePersonCollection();
+            //RandomizePersonCollection();
         }
         //Assignment 1
         static void TestMiniAsio()
@@ -110,6 +110,8 @@ namespace Lab5
         {
             CardDeck cards = new CardDeck();
             cards.AddCards();
+            cards.ToString();
+            cards.ShuffleDeck();
             cards.ToString();
         }
         //Assignment 4
