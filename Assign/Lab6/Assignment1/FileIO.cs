@@ -14,7 +14,7 @@ namespace Lab6
 
         public FileIO ()
         {
-            FilePath = @"d:\K8908";
+            FilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         }
         public void WriteFile(string input)
         {

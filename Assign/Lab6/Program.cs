@@ -19,7 +19,7 @@ namespace Lab6
                 Console.WriteLine("Please input some text to be saved: \n");
                 string input = Console.ReadLine();
                 FileIO fileIO = new FileIO();
-                //fileIO.WriteFile(input);
+                fileIO.WriteFile(input);
                 fileIO.ReadFile();
             }
             catch (Exception e)
