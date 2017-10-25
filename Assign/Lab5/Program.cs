@@ -21,9 +21,9 @@ namespace Lab5
         {
             //TestMiniAsio();
             //CreateCd();
-            PlayCards();
+            //PlayCards();
             //UseHockeyTeam();
-            //RandomizePersonCollection();
+            RandomizePersonCollection();
         }
         //Assignment 1
         static void TestMiniAsio()
