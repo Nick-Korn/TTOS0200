@@ -10,20 +10,23 @@ namespace Lab6
     class FileIO
     {
         public string FileInput { get; set; }
+        public string Filee { get; set; }
         public string FilePath { get; set; }
+        public StreamWriter InputFile { get; set; }
 
         public FileIO ()
         {
+            
             FilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            Filee = FilePath + @"\test.txt";
+            InputFile = new StreamWriter(Filee);
         }
         public void WriteFile(string input)
         {
             try
             {
                 FileInput = input;
-                StreamWriter outputFile = new StreamWriter(FilePath + @"\test.txt");
-                outputFile.Write(FileInput);
-                outputFile.Close();
+                InputFile.WriteLine(FileInput);
             }
             catch (Exception e)
             {
@@ -35,7 +38,7 @@ namespace Lab6
         {
             try
             {
-                string outPut = File.ReadAllText(FilePath + @"\test.txt");
+                string outPut = File.ReadAllText(Filee);
                 Console.WriteLine(outPut);
             }
             catch (Exception e)
