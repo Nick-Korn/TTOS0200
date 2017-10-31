@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="Assignment1\FileIO.cs" />
     <Compile Include="Assignment2\NameIO.cs" />
+    <Compile Include="Assignment3\NumbersIO.cs" />
+    <Compile Include="Assignment4\TVProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

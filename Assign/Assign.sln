@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab 1", "Assign\Lab 1.csproj", "{39AB3BE9-95B6-4691-B528-D594CC280946}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments1", "Assign\Assignments1.csproj", "{39AB3BE9-95B6-4691-B528-D594CC280946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab 2", "Assignments2\Lab 2.csproj", "{E0E4A23F-BEF3-4B54-9621-F803A67FC28B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments2", "Assignments2\Assignments2.csproj", "{E0E4A23F-BEF3-4B54-9621-F803A67FC28B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3", "Lab3\Lab3.csproj", "{869FF213-1D70-4CE2-B454-E8BD3C98A068}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments3", "Lab3\Assignments3.csproj", "{869FF213-1D70-4CE2-B454-E8BD3C98A068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab4", "Lab4\Lab4.csproj", "{EFCE7BB8-B978-405A-B383-CB3E607127D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments4", "Lab4\Assignments4.csproj", "{EFCE7BB8-B978-405A-B383-CB3E607127D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5", "Lab5\Lab5.csproj", "{07D6B096-8E4B-4FD8-9783-05DDFA9EF039}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments5", "Lab5\Assignments5.csproj", "{07D6B096-8E4B-4FD8-9783-05DDFA9EF039}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab6", "Lab6\Lab6.csproj", "{8F11E1B4-5138-4C6A-9DD5-954AFF45C23A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments6", "Lab6\Assignments6.csproj", "{8F11E1B4-5138-4C6A-9DD5-954AFF45C23A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
