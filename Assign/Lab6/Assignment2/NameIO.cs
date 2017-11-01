@@ -10,7 +10,6 @@ namespace Lab6
     class NameIO
     {
         #region PROPERTIES
-        public string FileInput { get; set; }
         public string Filee { get; set; }
         public string FilePath { get; set; }
         public List<string> Data { get; set; }

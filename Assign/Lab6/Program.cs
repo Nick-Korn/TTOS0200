@@ -13,10 +13,19 @@ namespace Lab6
     {
         static void Main(string[] args)
         {
-            //ReadWriteSimple();
-            //ReadWriteNames();
-            //ReadWriteNumbers();
-            ReadWriteObjects();
+            try
+            {
+
+                //ReadWriteSimple();
+                //ReadWriteNames();
+                //ReadWriteNumbers();
+                ReadWriteObjects();
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
         }
         // Assignemt 1
         static void ReadWriteSimple()
@@ -42,9 +51,9 @@ namespace Lab6
                 }
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine(e.Message);
+                throw;
             }
         }
         // Assignment 2
@@ -58,9 +67,9 @@ namespace Lab6
                     test.ReadFile();
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Console.WriteLine(e.Message);
+                throw;
             }
         }
         // Assignmnet 3
@@ -81,10 +90,10 @@ namespace Lab6
                 Console.WriteLine("The floats: \n");
                 test.ReadFloatFile();
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
-                Console.WriteLine(e.Message);
+                 throw;
             }
         }
         // Assignment 4
@@ -115,10 +124,10 @@ namespace Lab6
                 }
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
-                Console.WriteLine(e.Message);
+                throw;
             }
         }
     }
