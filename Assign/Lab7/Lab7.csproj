@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assignment1\Dice.cs" />
+    <Compile Include="Assignment2\Product.cs" />
+    <Compile Include="Assignment3\Fish.cs" />
+    <Compile Include="Assignment3\Fisherman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
