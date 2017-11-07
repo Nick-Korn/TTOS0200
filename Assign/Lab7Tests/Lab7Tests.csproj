@@ -57,6 +57,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Assignment5\ArrayCalcsTests.cs" />
+    <Compile Include="Assignment6\InvoiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

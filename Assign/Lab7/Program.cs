@@ -119,12 +119,28 @@ namespace Lab7
         }
         static void CalculateArray()
         {
-            double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
-            Console.WriteLine(ArrayCalcs.Sum(array));
-            Console.WriteLine(ArrayCalcs.Avg(array));
-            Console.WriteLine(ArrayCalcs.Max(array));
-            Console.WriteLine(ArrayCalcs.Min(array));
+            try
+            {
+                double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+                Console.WriteLine(ArrayCalcs.Sum(array));
+                Console.WriteLine(ArrayCalcs.Avg(array));
+                Console.WriteLine(ArrayCalcs.Max(array));
+                Console.WriteLine(ArrayCalcs.Min(array));
 
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        static void CreateInvoice()
+        {
+            Invoice kirsi = new Invoice("Kirsi Kernel");
+            kirsi.Items.Add(new InvoiceItem("Milk", 1.75, 1));
+            kirsi.Items.Add(new InvoiceItem("Beer", 5.25, 1));
+            kirsi.Items.Add(new InvoiceItem("Milk", 2.50, 2));
+            Console.WriteLine(kirsi.PrintInvoice());
         }
         static void Main(string[] args)
         {
@@ -134,7 +150,8 @@ namespace Lab7
                 //CollectProducts();
                 //AddFisher();
                 //CalculateShapes();
-                CalculateArray();
+                //CalculateArray();
+                CreateInvoice();
             }
             catch (Exception e)
             {
