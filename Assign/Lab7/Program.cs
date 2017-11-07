@@ -96,6 +96,26 @@ namespace Lab7
 
                 throw;
             }
+
+        }
+        static void CalculateShapes()
+        {
+            try
+            {
+                Shapes shapeList = new Shapes();
+                shapeList.ShapeList.Add(new Circle("Circle", 1));
+                shapeList.ShapeList.Add(new Circle("Circle", 2));
+                shapeList.ShapeList.Add(new Circle("Circle", 3));
+                shapeList.ShapeList.Add(new Rectangle("Rectangle", 10, 20));
+                shapeList.ShapeList.Add(new Rectangle("Rectangle", 20, 30));
+                shapeList.ShapeList.Add(new Rectangle("Rectangle", 40, 50));
+                Console.WriteLine(shapeList.ToString());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         static void Main(string[] args)
         {
@@ -103,7 +123,8 @@ namespace Lab7
             {
                 //ThrowDice();
                 //CollectProducts();
-                AddFisher();
+                //AddFisher();
+                CalculateShapes();
             }
             catch (Exception e)
             {

@@ -18,8 +18,17 @@ namespace Lab7
         
         public int ThrowDice()
         {
-            int DiceThrow = DiceInt.Next(1, 7);
-            return DiceThrow;
+            try
+            {
+                int DiceThrow = DiceInt.Next(1, 7);
+                return DiceThrow;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
     }
 }
