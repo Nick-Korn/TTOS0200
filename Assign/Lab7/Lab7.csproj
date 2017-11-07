@@ -49,6 +49,7 @@
     <Compile Include="Assignment4\Circle.cs" />
     <Compile Include="Assignment4\Rectangle.cs" />
     <Compile Include="Assignment4\Shapes.cs" />
+    <Compile Include="Assignment5\ArrayCalcs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Assignment4\Shape.cs" />

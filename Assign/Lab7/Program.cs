@@ -117,6 +117,15 @@ namespace Lab7
                 throw;
             }
         }
+        static void CalculateArray()
+        {
+            double[] array = { 1.0, 2.0, 3.3, 5.5, 6.3, -4.5, 12.0 };
+            Console.WriteLine(ArrayCalcs.Sum(array));
+            Console.WriteLine(ArrayCalcs.Avg(array));
+            Console.WriteLine(ArrayCalcs.Max(array));
+            Console.WriteLine(ArrayCalcs.Min(array));
+
+        }
         static void Main(string[] args)
         {
             try
@@ -124,7 +133,8 @@ namespace Lab7
                 //ThrowDice();
                 //CollectProducts();
                 //AddFisher();
-                CalculateShapes();
+                //CalculateShapes();
+                CalculateArray();
             }
             catch (Exception e)
             {
