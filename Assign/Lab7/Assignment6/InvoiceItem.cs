@@ -21,14 +21,30 @@ namespace Lab7
 
         public double CalculateTotal()
         {
-            double total = 0;
-            total = Price * Quantity;
-            return total;
+            try
+            {
+                double total = 0;
+                total = Price * Quantity;
+                return total;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public override string ToString()
         {
-            return string.Format("{0} {1} {2} pieces {3} total\n", Name, Price, Quantity, CalculateTotal().ToString("n2"));
+            try
+            {
+                return string.Format("{0} {1} {2} pieces {3} total\n", Name, Price, Quantity, CalculateTotal().ToString("n2"));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -19,27 +19,43 @@ namespace Lab7
 
         public double CalculateTotalCost()
         {
-            double total = 0;
-            foreach (InvoiceItem item in Items)
+            try
             {
-                total += item.CalculateTotal();
+                double total = 0;
+                foreach (InvoiceItem item in Items)
+                {
+                    total += item.CalculateTotal();
+                }
+                total = Math.Round(total, 2);
+                return total;
             }
-            total = Math.Round(total, 2);
-            return total;
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public string PrintInvoice()
         {
-            string retval = "";
-            retval = string.Format("Customer {0}'s Invoice: \n", Customer);
-            retval += "===============================\n";
-            foreach (InvoiceItem item in Items)
+            try
             {
-                retval += item.ToString();
+                string retval = "";
+                retval = string.Format("Customer {0}'s Invoice: \n", Customer);
+                retval += "===============================\n";
+                foreach (InvoiceItem item in Items)
+                {
+                    retval += item.ToString();
+                }
+                retval += "===============================\n";
+                retval += string.Format("Total: {0} euro", CalculateTotalCost().ToString("n2"));
+                return retval;
             }
-            retval += "===============================\n";
-            retval += string.Format("Total: {0} euro", CalculateTotalCost().ToString("n2"));
-            return retval;
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
