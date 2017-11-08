@@ -136,11 +136,19 @@ namespace Lab7
         }
         static void CreateInvoice()
         {
-            Invoice kirsi = new Invoice("Kirsi Kernel");
-            kirsi.Items.Add(new InvoiceItem("Milk", 1.75, 1));
-            kirsi.Items.Add(new InvoiceItem("Beer", 5.25, 1));
-            kirsi.Items.Add(new InvoiceItem("Milk", 2.50, 2));
-            Console.WriteLine(kirsi.PrintInvoice());
+            try
+            {
+                Invoice kirsi = new Invoice("Kirsi Kernel");
+                kirsi.Items.Add(new InvoiceItem("Milk", 1.75, 1));
+                kirsi.Items.Add(new InvoiceItem("Beer", 5.25, 1));
+                kirsi.Items.Add(new InvoiceItem("Milk", 2.50, 2));
+                Console.WriteLine(kirsi.PrintInvoice());
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         static void Main(string[] args)
         {
