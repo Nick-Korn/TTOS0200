@@ -1,0 +1,29 @@
+﻿<Window x:Class="Assignment2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBox x:Name="convTextBox" HorizontalAlignment="Left" Height="39" Margin="70,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="24" RenderTransformOrigin="0.5,0.5" TextChanged="convTextBox_TextChanged">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.004"/>
+                    <RotateTransform Angle="-0.17"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="convdTextBox" HorizontalAlignment="Left" Height="39" Margin="375,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" FontSize="24"/>
+        <ComboBox x:Name="convdCoBox" HorizontalAlignment="Left" Margin="187,143,0,0" VerticalAlignment="Top" Width="175" Height="39" FontSize="20" Text="Select currency" SelectedIndex="0">
+            <ListBoxItem Content="Dollars to Euro" FontSize="20"/>
+            <ListBoxItem Content="Euro to Dollars" FontSize="20"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="122,76,0,0" TextWrapping="Wrap" Text="Currency Converter 5000" VerticalAlignment="Top" Height="34" Width="272" FontSize="24"/>
+
+
+    </Grid>
+</Window>
