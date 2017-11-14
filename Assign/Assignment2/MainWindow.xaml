@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBox x:Name="convTextBox" HorizontalAlignment="Left" Height="39" Margin="70,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="24" RenderTransformOrigin="0.5,0.5" TextChanged="convTextBox_TextChanged">
+        <TextBox x:Name="convTextBox" HorizontalAlignment="Left" Height="39" Margin="44,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" FontSize="24" RenderTransformOrigin="0.5,0.5" TextChanged="convTextBox_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,11 +18,12 @@
             </TextBox.RenderTransform>
         </TextBox>
         <TextBox x:Name="convdTextBox" HorizontalAlignment="Left" Height="39" Margin="375,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="101" FontSize="24"/>
-        <ComboBox x:Name="convdCoBox" HorizontalAlignment="Left" Margin="187,143,0,0" VerticalAlignment="Top" Width="175" Height="39" FontSize="20" Text="Select currency" SelectedIndex="0">
+        <ComboBox x:Name="convdCoBox" HorizontalAlignment="Left" Margin="177,143,0,0" VerticalAlignment="Top" Width="175" Height="39" FontSize="20" Text="Select currency" SelectedIndex="0">
             <ListBoxItem Content="Dollars to Euro" FontSize="20"/>
             <ListBoxItem Content="Euro to Dollars" FontSize="20"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="122,76,0,0" TextWrapping="Wrap" Text="Currency Converter 5000" VerticalAlignment="Top" Height="34" Width="272" FontSize="24"/>
+        <TextBox x:Name="errorTextBox" HorizontalAlignment="Left" Height="48" Margin="122,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="24" TextAlignment="Center"/>
 
 
     </Grid>

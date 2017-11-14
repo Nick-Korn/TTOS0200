@@ -35,7 +35,7 @@ namespace Assignment2
         public void ConvertToDollar()
         { 
 
-            double amount = double.Parse(convTextBox.Text) * ExchangeRate;
+            double amount = double.Parse(convTextBox.Text) / ExchangeRate;
             convdTextBox.Text = amount.ToString("n2") + "$";
         }
 
@@ -43,7 +43,7 @@ namespace Assignment2
         {
             if (Double.TryParse(convTextBox.Text, out double result))
             {
-                
+                errorTextBox.Clear();
                 if  (convdCoBox.SelectedIndex == 0)
                 {
                     ConvertToDollar();
@@ -55,7 +55,8 @@ namespace Assignment2
             }
             else
             {
-                convdTextBox.Text = "Invalid input"; 
+                convdTextBox.Clear();
+                errorTextBox.Text = "Invalid input"; 
             }
 
         }
