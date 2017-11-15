@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="516.18" Width="888.219" SizeToContent="WidthAndHeight">
+        Title="MainWindow" Height="516.18" Width="888.219">
     <Grid x:Name="___No_Name_" Margin="0,0,0,5">
         <TextBox x:Name="windwidthTextBox" HorizontalAlignment="Left" Height="23" Margin="722,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
         <TextBox x:Name="windheightTextBox" HorizontalAlignment="Left" Height="23" Margin="722,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>

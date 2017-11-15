@@ -142,7 +142,7 @@ namespace Assignment3
                         Height = (WindowHeight + 2 * WindowFrameWidth) / 10
                     };
                     Canvas.SetTop(frame, -70);
-                    Canvas.SetLeft(frame, -140);
+                    Canvas.SetLeft(frame, -70);
                     frameCanvas.Children.Add(frame);
 
                     Rectangle glass = new Rectangle
@@ -152,7 +152,7 @@ namespace Assignment3
                         Width = WindowWidth / 10,
                         Height = WindowHeight / 10
                     };
-                    Canvas.SetLeft(glass, -140 + WindowFrameWidth / 10);
+                    Canvas.SetLeft(glass, -70 + WindowFrameWidth / 10);
                     Canvas.SetTop(glass, -70 + WindowFrameWidth / 10);
                     windowCanvas.Children.Add(glass);
 
