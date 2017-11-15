@@ -24,6 +24,7 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="122,76,0,0" TextWrapping="Wrap" Text="Currency Converter 5000" VerticalAlignment="Top" Height="34" Width="272" FontSize="24"/>
         <TextBox x:Name="errorTextBox" HorizontalAlignment="Left" Height="48" Margin="122,237,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="24" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="122,221,0,0" Width="105"><Run Text="Error messages"/><LineBreak/><Run/></TextBlock>
 
 
     </Grid>

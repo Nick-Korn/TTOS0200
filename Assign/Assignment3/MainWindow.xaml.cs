@@ -132,27 +132,28 @@ namespace Assignment3
                     CalculateGlassArea(WindowHeight, WindowWidth);
                     CalculateWindowArea(WindowHeight, WindowWidth, WindowFrameWidth);
 
+                    // Bonus 31
                     BrushConverter conv = new BrushConverter();
                     Rectangle frame = new Rectangle
                     {
                         Fill = conv.ConvertFromString("SaddleBrown") as SolidColorBrush,
                         Stroke = conv.ConvertFromString("Black") as SolidColorBrush,
-                        Width = (WindowWidth + 2 * WindowFrameWidth) / 5,
-                        Height = (WindowHeight + 2 * WindowFrameWidth) / 5
+                        Width = (WindowWidth + 2 * WindowFrameWidth) / 10,
+                        Height = (WindowHeight + 2 * WindowFrameWidth) / 10
                     };
                     Canvas.SetTop(frame, -70);
-                    Canvas.SetLeft(frame, -70);
+                    Canvas.SetLeft(frame, -140);
                     frameCanvas.Children.Add(frame);
 
                     Rectangle glass = new Rectangle
                     {
                         Fill = conv.ConvertFromString("LightBlue") as SolidColorBrush,
                         Stroke = conv.ConvertFromString("Black") as SolidColorBrush,
-                        Width = WindowWidth / 5,
-                        Height = WindowHeight / 5
+                        Width = WindowWidth / 10,
+                        Height = WindowHeight / 10
                     };
-                    Canvas.SetLeft(glass, -70 + WindowFrameWidth / 5);
-                    Canvas.SetTop(glass, -70 + WindowFrameWidth / 5);
+                    Canvas.SetLeft(glass, -140 + WindowFrameWidth / 10);
+                    Canvas.SetTop(glass, -70 + WindowFrameWidth / 10);
                     windowCanvas.Children.Add(glass);
 
                     /*
