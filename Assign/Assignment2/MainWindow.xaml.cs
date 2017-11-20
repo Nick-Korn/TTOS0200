@@ -28,37 +28,61 @@ namespace Assignment2
         }
         public void ConvertToEuro()
         {
+            try
+            {
 
-            double amount = double.Parse(convTextBox.Text) * ExchangeRate;
-            convdTextBox.Text = amount.ToString("n2") + "€";
+                double amount = double.Parse(convTextBox.Text) * ExchangeRate;
+                convdTextBox.Text = amount.ToString("n2") + "€";
+            }
+            catch (Exception ex)
+            {
+
+                errorTextBox.Text = ex.Message;
+            }
         }
         public void ConvertToDollar()
-        { 
+        {
 
-            double amount = double.Parse(convTextBox.Text) / ExchangeRate;
-            convdTextBox.Text = amount.ToString("n2") + "$";
+            try
+            {
+                double amount = double.Parse(convTextBox.Text) / ExchangeRate;
+                convdTextBox.Text = amount.ToString("n2") + "$";
+            }
+            catch (Exception ex)
+            {
+
+                errorTextBox.Text = ex.Message;
+            }
         }
 
         private void convTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (Double.TryParse(convTextBox.Text, out double result))
+            try
             {
-                errorTextBox.Clear();
-                if  (convdCoBox.SelectedIndex == 0)
+                if (Double.TryParse(convTextBox.Text, out double result))
                 {
-                    ConvertToDollar();
+                    errorTextBox.Clear();
+                    if (convdCoBox.SelectedIndex == 0)
+                    {
+                        ConvertToDollar();
+                    }
+                    else if (convdCoBox.SelectedIndex == 1)
+                    {
+                        ConvertToEuro();
+                    }
                 }
-                else if (convdCoBox.SelectedIndex == 1)
+                else
                 {
-                    ConvertToEuro();
+                    convdTextBox.Clear();
+                    errorTextBox.Text = "Invalid input";
                 }
-            }
-            else
-            {
-                convdTextBox.Clear();
-                errorTextBox.Text = "Invalid input"; 
-            }
 
+            }
+            catch (Exception ex)
+            {
+
+                errorTextBox.Text = ex.Message;
+            }
         }
     }
 }

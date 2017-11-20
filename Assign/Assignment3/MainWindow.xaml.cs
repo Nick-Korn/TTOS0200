@@ -35,12 +35,20 @@ namespace Assignment3
             }
             set
             {
-                if (value <= MaxValue && value >= MinValue) windowHeight = value;
-                else
+                try
                 {
-                    errorTextBox.Text += "Invalid window height, setting the value to minimun.\n";
-                    windowHeight = MinValue;
-                    windheightTextBox.Text = windowHeight.ToString();
+                    if (value <= MaxValue && value >= MinValue) windowHeight = value;
+                    else
+                    {
+                        errorTextBox.Text += "Invalid window height, setting the value to minimun.\n";
+                        windowHeight = MinValue;
+                        windheightTextBox.Text = windowHeight.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    errorTextBox.Text = ex.Message;
                 }
             }
         }
@@ -52,12 +60,20 @@ namespace Assignment3
             }
             set
             {
-                if (value <= MaxValue && value >= MinValue) windowWidth = value;
-                else
+                try
                 {
-                    errorTextBox.Text += "Invalid window width, setting the value to minimun.\n";
-                    windowWidth = MinValue;
-                    windwidthTextBox.Text = windowWidth.ToString();
+                    if (value <= MaxValue && value >= MinValue) windowWidth = value;
+                    else
+                    {
+                        errorTextBox.Text += "Invalid window width, setting the value to minimun.\n";
+                        windowWidth = MinValue;
+                        windwidthTextBox.Text = windowWidth.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    errorTextBox.Text = ex.Message;
                 }
             }
         }
@@ -68,14 +84,30 @@ namespace Assignment3
         }
         public void CalculateWindowArea(int height, int width, int frameWidth)
         {
-            int area = (height + frameWidth) * (width + frameWidth);
-            windowareaTextBox.Text = string.Format("{0} cm^2", area / 10) ;
+            try
+            {
+                int area = (height + frameWidth) * (width + frameWidth);
+                windowareaTextBox.Text = string.Format("{0} cm^2", area / 10);
+            }
+            catch (Exception ex)
+            {
+
+                errorTextBox.Text = ex.Message;
+            }
             
         }
         public void CalculateGlassArea(int height, int width)
         {
-            int area = height * width;
-            glassareaTextBox.Text = string.Format("{0} cm^2", area / 10);
+            try
+            {
+                int area = height * width;
+                glassareaTextBox.Text = string.Format("{0} cm^2", area / 10);
+            }
+            catch (Exception ex)
+            {
+
+                errorTextBox.Text = ex.Message;
+            }
         }
         public void CalculateFrameCircumference(int height, int width, int frameWidth)
         {
@@ -85,46 +117,69 @@ namespace Assignment3
 
         private void calcButton_Click(object sender, RoutedEventArgs e)
         {
-            if (int.TryParse(windwidthTextBox.Text, out int result) && int.TryParse(windheightTextBox.Text, out int result2) && int.TryParse(framewidthTextBox.Text, out int result3))
+            try
             {
-                errorTextBox.Clear();
-                frameCanvas.Children.Clear();
-                windowCanvas.Children.Clear();
-                WindowWidth = int.Parse(windwidthTextBox.Text);
-                WindowHeight = int.Parse(windheightTextBox.Text);
-                WindowFrameWidth = int.Parse(framewidthTextBox.Text);
-
-                CalculateFrameCircumference(WindowHeight, WindowWidth, WindowFrameWidth);
-                CalculateGlassArea(WindowHeight, WindowWidth);
-                CalculateWindowArea(WindowHeight, WindowWidth, WindowFrameWidth);
-
-                BrushConverter conv = new BrushConverter();
-                Rectangle frame = new Rectangle
+                if (int.TryParse(windwidthTextBox.Text, out int result) && int.TryParse(windheightTextBox.Text, out int result2) && int.TryParse(framewidthTextBox.Text, out int result3))
                 {
-                    Fill = conv.ConvertFromString("SaddleBrown") as SolidColorBrush,
-                    Stroke = conv.ConvertFromString("Black") as SolidColorBrush,
-                    Width = (WindowWidth + 2 * WindowFrameWidth) / 5,
-                    Height = (WindowHeight + 2 * WindowFrameWidth) / 5
-                };
-                Canvas.SetTop(frame, -70);
-                Canvas.SetLeft(frame, -70);
-                frameCanvas.Children.Add(frame);
+                    errorTextBox.Clear();
+                    frameCanvas.Children.Clear();
+                    windowCanvas.Children.Clear();
+                    WindowWidth = int.Parse(windwidthTextBox.Text);
+                    WindowHeight = int.Parse(windheightTextBox.Text);
+                    WindowFrameWidth = int.Parse(framewidthTextBox.Text);
 
-                Rectangle glass = new Rectangle
+                    CalculateFrameCircumference(WindowHeight, WindowWidth, WindowFrameWidth);
+                    CalculateGlassArea(WindowHeight, WindowWidth);
+                    CalculateWindowArea(WindowHeight, WindowWidth, WindowFrameWidth);
+
+                    // Bonus 31
+                    BrushConverter conv = new BrushConverter();
+                    Rectangle frame = new Rectangle
+                    {
+                        Fill = conv.ConvertFromString("SaddleBrown") as SolidColorBrush,
+                        Stroke = conv.ConvertFromString("Black") as SolidColorBrush,
+                        Width = (WindowWidth + 2 * WindowFrameWidth) / 10,
+                        Height = (WindowHeight + 2 * WindowFrameWidth) / 10
+                    };
+                    Canvas.SetTop(frame, -70);
+                    Canvas.SetLeft(frame, -70);
+                    frameCanvas.Children.Add(frame);
+
+                    Rectangle glass = new Rectangle
+                    {
+                        Fill = conv.ConvertFromString("LightBlue") as SolidColorBrush,
+                        Stroke = conv.ConvertFromString("Black") as SolidColorBrush,
+                        Width = WindowWidth / 10,
+                        Height = WindowHeight / 10
+                    };
+                    Canvas.SetLeft(glass, -70 + WindowFrameWidth / 10);
+                    Canvas.SetTop(glass, -70 + WindowFrameWidth / 10);
+                    windowCanvas.Children.Add(glass);
+
+<<<<<<< HEAD
+=======
+                    /*
+                    BrushConverter conv = new BrushConverter();
+                    glassRectangle.Width = WindowWidth / 10;
+                    glassRectangle.Height = WindowHeight / 10;
+                    glassRectangle.Fill = conv.ConvertFromString("LightBlue") as SolidColorBrush;
+                    glassRectangle.Stroke = conv.ConvertFromString("Black") as SolidColorBrush;
+                    frameRectangle.Width = (WindowWidth + WindowFrameWidth) / 10;
+                    frameRectangle.Height = (WindowHeight + WindowFrameWidth) / 10;
+                    frameRectangle.Stroke = conv.ConvertFromString("Black") as SolidColorBrush;
+                    frameRectangle.Fill = conv.ConvertFromString("SaddleBrown") as SolidColorBrush;
+                    */
+                }
+                else
                 {
-                    Fill = conv.ConvertFromString("LightBlue") as SolidColorBrush,
-                    Stroke = conv.ConvertFromString("Black") as SolidColorBrush,
-                    Width = WindowWidth / 5,
-                    Height = WindowHeight / 5
-                };
-                Canvas.SetLeft(glass, -70 + WindowFrameWidth/5);
-                Canvas.SetTop(glass, -70 + WindowFrameWidth/5);
-                windowCanvas.Children.Add(glass);
-
+                    errorTextBox.Text = "Invalid input";
+                }
+>>>>>>> 6874b71710990607a8d66231be28be8b735196bc
             }
-            else
+            catch (Exception ex)
             {
-                errorTextBox.Text = "Invalid input";
+
+                errorTextBox.Text = ex.Message;
             }
         }
     }

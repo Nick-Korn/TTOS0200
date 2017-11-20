@@ -24,24 +24,48 @@ namespace Assignment1
         public int CarCount { get; set; }
         public MainWindow()
         {
-            TruckCount = 0;
-            CarCount = 0;
-            InitializeComponent();
+            try
+            {
+                TruckCount = 0;
+                CarCount = 0;
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+
+                erorrTextBox.Text = ex.Message; 
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            truckTextBlock.Text = TruckCount.ToString();
-            TruckCount++;
-            truckTextBlock.Text = TruckCount.ToString();
+            try
+            {
+                truckTextBlock.Text = TruckCount.ToString();
+                TruckCount++;
+                truckTextBlock.Text = TruckCount.ToString();
 
+            }
+            catch (Exception ex)
+            {
+
+                erorrTextBox.Text = ex.Message; 
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            truckTextBlock.Text = TruckCount.ToString();
-            CarCount++;
-            carTextBlock.Text = CarCount.ToString();
+            try
+            {
+                truckTextBlock.Text = TruckCount.ToString();
+                CarCount++;
+                carTextBlock.Text = CarCount.ToString();
+            }
+            catch (Exception ex)
+            {
+
+                erorrTextBox.Text = ex.Message;
+            }
 
         }
     }
