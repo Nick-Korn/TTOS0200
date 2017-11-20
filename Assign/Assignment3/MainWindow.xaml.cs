@@ -121,17 +121,6 @@ namespace Assignment3
                 Canvas.SetTop(glass, -70 + WindowFrameWidth/5);
                 windowCanvas.Children.Add(glass);
 
-                /*
-                BrushConverter conv = new BrushConverter();
-                glassRectangle.Width = WindowWidth / 10;
-                glassRectangle.Height = WindowHeight / 10;
-                glassRectangle.Fill = conv.ConvertFromString("LightBlue") as SolidColorBrush;
-                glassRectangle.Stroke = conv.ConvertFromString("Black") as SolidColorBrush;
-                frameRectangle.Width = (WindowWidth + WindowFrameWidth) / 10;
-                frameRectangle.Height = (WindowHeight + WindowFrameWidth) / 10;
-                frameRectangle.Stroke = conv.ConvertFromString("Black") as SolidColorBrush;
-                frameRectangle.Fill = conv.ConvertFromString("SaddleBrown") as SolidColorBrush;
-                */
             }
             else
             {
