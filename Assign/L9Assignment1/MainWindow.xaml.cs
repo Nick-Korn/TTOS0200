@@ -22,19 +22,35 @@ namespace L9Assignment1
     {
         public MainWindow()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            List<CheckBox> chbList = myStackPanel.Children.OfType<CheckBox>().ToList();
-
-            foreach (var chb in chbList)
+            try
             {
-                if ((bool)chb.IsChecked)
+                List<CheckBox> chbList = myStackPanel.Children.OfType<CheckBox>().ToList();
+
+                foreach (var chb in chbList)
                 {
-                    listTextBox.Text += chb.Content.ToString() + " ";
+                    if ((bool)chb.IsChecked)
+                    {
+                        listTextBox.Text += chb.Content.ToString() + " ";
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
     }

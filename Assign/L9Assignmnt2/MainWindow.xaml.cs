@@ -23,22 +23,46 @@ namespace L9Assignmnt2
         private List<Player> players;
         public MainWindow()
         {
-            InitializeComponent();
-            players = Player.GetPlayers();
+            try
+            {
+                InitializeComponent();
+                players = Player.GetPlayers();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         private void dgPlayers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Object obj = dgPlayers.SelectedItem;
-            if (obj != null)
+            try
             {
-                Player chosen = (Player)obj;
+                Object obj = dgPlayers.SelectedItem;
+                if (obj != null)
+                {
+                    Player chosen = (Player)obj;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void getplayersBtn_Click(object sender, RoutedEventArgs e)
         {
-            dgPlayers.ItemsSource = players;
+            try
+            {
+                dgPlayers.ItemsSource = players;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
