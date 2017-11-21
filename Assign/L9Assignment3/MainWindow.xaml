@@ -1,0 +1,33 @@
+﻿<Window x:Class="L9Assignment3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:L9Assignment3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="firstTxtBlock" Text="Choose a game" Margin="10,5,5,5" VerticalAlignment="Top"/>
+                <ComboBox x:Name="gameCmbBox" VerticalAlignment="Top" Width="125" Margin="5,5,10,5" SelectedIndex="0">
+                    <ComboBoxItem Content="Lotto"/>
+                    <ComboBoxItem Content="Viking Lotto"/>
+                    <ComboBoxItem Content="Eurojackpot"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="firstTxtBox" Text="Number of draws" VerticalAlignment="Top" Margin="10,5,5,5" Width="156" HorizontalAlignment="Left"/>
+                <TextBox x:Name="drawTxtBox" Text=" " VerticalAlignment="Top" Margin="5,5,10,10" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="drawBtn" Content="Draw" VerticalAlignment="Top" Margin="75,5,20,5" Click="drawBtn_Click" />
+                <Button x:Name="clearBtn" Content="Clear" VerticalAlignment="Top" Margin="5,5,5,5" Click="clearBtn_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Drawn lines:" Width="200" HorizontalAlignment="Left"/>
+                <TextBox x:Name="resultTxtBox" HorizontalAlignment="Left" Text="" Width="200" VerticalAlignment="Top" Margin="10,10,10,10" Height="200" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
