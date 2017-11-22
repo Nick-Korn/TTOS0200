@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:L9Assignment1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="249.719" Width="258.567">
+        Title="MainWindow" Height="273.719" Width="258.567" SizeToContent="WidthAndHeight">
     <Grid>
         <StackPanel x:Name="myStackPanel" >
-            <CheckBox x:Name="milkCheckBox" Content="Milk" Margin="0,0,0,5"/>
-            <CheckBox x:Name="butterCheckBox" Content="Butter" Margin="0,0,0,5"/>
-            <CheckBox x:Name="beerCheckBox" Content="Beer" Margin="0,0,0,5"/>
-            <CheckBox x:Name="chickenCheckBox" Content="Chicken" Margin="0,0,0,5"/>
-            <CheckBox x:Name="LemonadeCheckBox" Content="Lemonade" Margin="0,0,0,5"/>
-            <Button Content="Buy" Margin="10,0,200,5" Click="Button_Click"/>
+            <CheckBox x:Name="milkCheckBox" Content="Milk" Margin="5,5,5,5"/>
+            <CheckBox x:Name="butterCheckBox" Content="Butter" Margin="5,5,5,5"/>
+            <CheckBox x:Name="beerCheckBox" Content="Beer" Margin="5,5,5,5"/>
+            <CheckBox x:Name="chickenCheckBox" Content="Chicken" Margin="5,5,5,5"/>
+            <CheckBox x:Name="LemonadeCheckBox" Content="Lemonade" Margin="5,5,5,5"/>
+            <Button Content="Buy" Margin="5,5,5,5" Click="Button_Click" Width="40" HorizontalAlignment="Left"/>
             <TextBlock Text="Shopping List:" Width="231" Height="20"/>
-            <TextBox x:Name="listTextBox" HorizontalAlignment="Left" Height="50" Margin="10,0,0,0" TextWrapping="Wrap" Text="" Width="231"/>
+            <TextBox x:Name="listTextBox" HorizontalAlignment="Left" Height="50" Margin="5,5,5,5" TextWrapping="Wrap" Text="" Width="231"/>
         </StackPanel>
     </Grid>
 </Window>

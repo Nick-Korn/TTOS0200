@@ -37,6 +37,8 @@ namespace L9Assignment1
         {
             try
             {
+                listTextBox.Clear();
+
                 List<CheckBox> chbList = myStackPanel.Children.OfType<CheckBox>().ToList();
 
                 foreach (var chb in chbList)
