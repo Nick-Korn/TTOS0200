@@ -12,13 +12,14 @@ namespace L9Assignment3
         public int NumberScale { get; set; }
         public bool StarNumbers { get; set; }
         static Random SingleNumber { get; set; }
+        public List<int> LottoLine { get; set; }
 
         public Lotto(int amountOfNumbers, int numberScale, bool starNumbers)
         {
             AmountOfNumbers = amountOfNumbers;
             NumberScale = numberScale;
             StarNumbers = starNumbers;
-
+            LottoLine = new List<int>();
         }
 
         static Lotto()
@@ -27,21 +28,23 @@ namespace L9Assignment3
             SingleNumber = new Random();
         }
 
-        public string DrawLottoLine()
+        public List<int> DrawLottoLine()
         {
             try
             {
-                string line = "";
+                int temp;
                 for (int i = 0; i < AmountOfNumbers; i++)
                 {
-                    int temp = SingleNumber.Next(1, NumberScale);
-                    line += temp + " ";
+                    temp = SingleNumber.Next(1, NumberScale);
+                    LottoLine.Add(temp);
                 }
+                LottoLine.Sort();
                 if (StarNumbers)
                 {
-                    line += SingleNumber.Next(1, 10) + " " + SingleNumber.Next(1, 10);
+                    LottoLine.Add(SingleNumber.Next(1, 10));
+                    LottoLine.Add(SingleNumber.Next(1, 10));
                 }
-                return line;
+                return LottoLine;
             }
             catch (Exception ex)
             {

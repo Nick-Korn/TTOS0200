@@ -20,13 +20,13 @@ namespace L9Assignment3
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<string> LottoLines { get; set; }
+        public List<int> LottoLines { get; set; }
         public MainWindow()
         {
             try
             {
                 InitializeComponent();
-                LottoLines = new List<string>();
+                LottoLines = new List<int>();
             }
             catch (Exception ex)
             {
@@ -37,8 +37,7 @@ namespace L9Assignment3
 
         private void drawBtn_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+
                 int choice = gameCmbBox.SelectedIndex;
                 int amount = 0;
                 int scale = 0;
@@ -67,22 +66,22 @@ namespace L9Assignment3
                         break;
                 }
                 Lotto draw = new Lotto(amount, scale, starNumbers);
-                string lottoLine;
+                //string lottoLine ="";
                 for (int i = 0; i < int.Parse(drawTxtBox.Text); i++)
                 {
-                    lottoLine = "Line " + (i + 1) + ": " + draw.DrawLottoLine();
-                    LottoLines.Add(lottoLine);
-                }
-                foreach (var item in LottoLines)
-                {
-                    resultTxtBox.Text += item + "\n";
-                }
-            }
-            catch (Exception ex)
-            {
+                    LottoLines.Clear();
+                    LottoLines = draw.DrawLottoLine();
+                    resultTxtBox.Text += "Line " + i + ": ";
+                    foreach (int number in LottoLines)
+                    {
+                        resultTxtBox.Text += number + " ";
+                    }
+                    resultTxtBox.Text += "\n";
 
-                MessageBox.Show(ex.Message);
-            }
+                }
+
+
+
         }
 
 
